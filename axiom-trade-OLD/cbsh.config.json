@@ -1,0 +1,6 @@
+{
+  "vault": "./gpt-vault/",
+  "logs": "./gpt-vault/logs/",
+  "tools": "./gpt-vault/tools/",
+  "tasks": "./gpt-vault/tasks/"
+}

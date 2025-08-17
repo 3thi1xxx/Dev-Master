@@ -1,0 +1,50 @@
+{
+  "session": {
+    "startTime": 1755339243294,
+    "duration": 30017,
+    "status": "MONITORING"
+  },
+  "trading": {
+    "totalTrades": 3,
+    "winningTrades": 3,
+    "losingTrades": 0,
+    "totalProfit": 46.1,
+    "totalLoss": 0,
+    "netProfit": 46.1,
+    "winRate": 100,
+    "avgProfitPerTrade": 15.366666666666667,
+    "maxDrawdown": 0,
+    "currentBalance": 1461
+  },
+  "detection": {
+    "tokensDetected": 4,
+    "tokensAnalyzed": 4,
+    "opportunitiesFound": 2,
+    "analysisSpeed": 228
+  },
+  "geographic": {
+    "aucklandAdvantageActive": true,
+    "avgLatency": 32,
+    "connectionQuality": 100
+  },
+  "alerts": [
+    {
+      "type": "MILESTONE",
+      "message": "Reached 46.1% net profit!",
+      "timestamp": 1755339286313,
+      "id": "tos8x9jtj"
+    },
+    {
+      "type": "OPPORTUNITY",
+      "message": "High-score token detected: PEPE (85)",
+      "timestamp": 1755339269316,
+      "id": "ug3igx8y5"
+    },
+    {
+      "type": "OPPORTUNITY",
+      "message": "High-score token detected: BONK (75)",
+      "timestamp": 1755339249320,
+      "id": "20efps5kd"
+    }
+  ]
+}

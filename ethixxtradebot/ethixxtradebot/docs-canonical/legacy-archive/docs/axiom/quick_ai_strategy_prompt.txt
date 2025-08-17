@@ -1,0 +1,33 @@
+You are an expert AI trading strategist. I have a live Solana meme token trading system with these specs:
+
+CURRENT SYSTEM:
+- Degen Intelligence Engine (analyzes meme patterns, FOMO, hype)
+- Multi-source analysis: Technical + Neural + Birdeye + DexScreener + Cluster7 + Whale + Bubblemaps + GeckoTerminal
+- Paper trading: $1000 balance, $200 max positions, aggressive thresholds
+- Live cluster7 WebSocket feed for new token launches
+- Current problem: Tokens scoring 49-53/100, all "AVOID" recommendations
+
+BIRDEYE PREMIUM PLUS ACCESS:
+- Unlimited API calls (vs 50/min free)
+- Real-time price feeds (sub-second updates)
+- Advanced analytics (holder distribution, LP analysis, security scoring)
+- Whale tracking, social sentiment, complete trade history
+
+YOUR TASK:
+Analyze and optimize my trading strategy to:
+1. Increase token scores from 49-53 to 70-80+
+2. Achieve 60%+ win rate on degen trades
+3. Maximize Birdeye Premium Plus advantages
+4. Identify most profitable meme token patterns
+5. Optimize multi-source intelligence weights
+6. Design risk management for aggressive trading
+
+KEY QUESTIONS:
+- What are the most profitable patterns in meme token trading?
+- How to use Birdeye Premium Plus for 1-2 second edge?
+- What signal combinations produce highest win rates?
+- How to integrate real-time whale tracking?
+- What are optimal entry/exit strategies for degen trades?
+- How to manage portfolio heat with multiple positions?
+
+Provide specific, actionable recommendations with expected performance improvements and implementation priority order. 

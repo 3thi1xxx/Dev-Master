@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+<dict>
+    <key>Macros</key>
+    <array>
+
+<!-- 1. Toggle Auto-Continue -->
+<dict>
+    <key>Name</key>
+    <string>Toggle Auto-Continue</string>
+    <key>Triggers</key>
+    <array>
+        <dict>
+            <key>MacroTriggerType</key>
+            <string>HotKey</string>
+            <key>KeyCode</key>
+            <integer>18</integer> <!-- 1 on Apple keyboard -->
+            <key>Modifiers</key>
+            <integer>768</integer> <!-- Command+Shift -->
+        </dict>
+    </array>
+    <key>Actions</key>
+    <array>
+        <dict>
+            <key>MacroActionType</key>
+            <string>SetVariableToCalculation</string>
+            <key>Variable</key>
+            <string>AutoContinueEnabled</string>
+            <key>Calculation</key>
+            <string>%Variable%AutoContinueEnabled% == 0 ? 1 : 0</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>IfThenElse</string>
+            <key>ConditionList</key>
+            <array>
+                <dict>
+                    <key>ConditionType</key>
+                    <string>Variable</string>
+                    <key>Variable</key>
+                    <string>AutoContinueEnabled</string>
+                    <key>Operator</key>
+                    <string>is</string>
+                    <key>Value</key>
+                    <string>1</string>
+                </dict>
+            </array>
+            <key>ThenActions</key>
+            <array>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>DisplayTextBriefly</string>
+                    <key>Text</key>
+                    <string>Auto-Continue: ON</string>
+                    <key>Seconds</key>
+                    <real>2</real>
+                </dict>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>ExecuteMacro</string>
+                    <key>MacroName</key>
+                    <string>Continue Button Clicker</string>
+                </dict>
+            </array>
+            <key>ElseActions</key>
+            <array>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>DisplayTextBriefly</string>
+                    <key>Text</key>
+                    <string>Auto-Continue: OFF</string>
+                    <key>Seconds</key>
+                    <real>2</real>
+                </dict>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>CancelMacro</string>
+                    <key>MacroName</key>
+                    <string>Continue Button Clicker</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</dict>
+
+<!-- 2. Continue Button Clicker -->
+<dict>
+    <key>Name</key>
+    <string>Continue Button Clicker</string>
+    <key>Actions</key>
+    <array>
+        <dict>
+            <key>MacroActionType</key>
+            <string>While</string>
+            <key>WhileConditions</key>
+            <array>
+                <dict>
+                    <key>ConditionType</key>
+                    <string>Variable</string>
+                    <key>Variable</key>
+                    <string>AutoContinueEnabled</string>
+                    <key>Operator</key>
+                    <string>is</string>
+                    <key>Value</key>
+                    <string>1</string>
+                </dict>
+            </array>
+            <key>WhileActions</key>
+            <array>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>PauseUntil</string>
+                    <key>Conditions</key>
+                    <array>
+                        <dict>
+                            <key>ConditionType</key>
+                            <string>FrontApplication</string>
+                            <key>ApplicationName</key>
+                            <string>Visual Studio Code</string>
+                        </dict>
+                    </array>
+                </dict>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>FindImageOnScreen</string>
+                    <key>ImagePath</key>
+                    <string>/Users/DjEthixx/Desktop/KEYBOARD/continue_button.png</string>
+                    <key>Fuzz</key>
+                    <real>0.30</real>
+                    <key>ResultVariable</key>
+                    <string>FoundImage</string>
+                </dict>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>MoveAndClick</string>
+                    <key>RelativeTo</key>
+                    <string>FoundImage</string>
+                    <key>X</key>
+                    <integer>0</integer>
+                    <key>Y</key>
+                    <integer>0</integer>
+                </dict>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>DisplayTextBriefly</string>
+                    <key>Text</key>
+                    <string>Clicked Continue</string>
+                    <key>Seconds</key>
+                    <real>1</real>
+                </dict>
+                <dict>
+                    <key>MacroActionType</key>
+                    <string>Pause</string>
+                    <key>Duration</key>
+                    <real>1.5</real>
+                </dict>
+            </array>
+        </dict>
+    </array>
+</dict>
+
+<!-- 3. Emergency Stop -->
+<dict>
+    <key>Name</key>
+    <string>Emergency Stop Auto-Continue</string>
+    <key>Triggers</key>
+    <array>
+        <dict>
+            <key>MacroTriggerType</key>
+            <string>HotKey</string>
+            <key>KeyCode</key>
+            <integer>1</integer> <!-- S -->
+            <key>Modifiers</key>
+            <integer>1310720</integer> <!-- Command+Option -->
+        </dict>
+    </array>
+    <key>Actions</key>
+    <array>
+        <dict>
+            <key>MacroActionType</key>
+            <string>SetVariableToText</string>
+            <key>Variable</key>
+            <string>AutoContinueEnabled</string>
+            <key>Text</key>
+            <string>0</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>CancelAllMacros</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>DisplayTextBriefly</string>
+            <key>Text</key>
+            <string>🛑 EMERGENCY STOP — Auto-Continue Disabled</string>
+            <key>Seconds</key>
+            <real>3</real>
+        </dict>
+    </array>
+</dict>
+
+<!-- 4. Auto Save All Files -->
+<dict>
+    <key>Name</key>
+    <string>Auto Save All in VS Code</string>
+    <key>Triggers</key>
+    <array>
+        <dict>
+            <key>MacroTriggerType</key>
+            <string>HotKey</string>
+            <key>KeyCode</key>
+            <integer>1</integer> <!-- S -->
+            <key>Modifiers</key>
+            <integer>768</integer> <!-- Command+Shift -->
+        </dict>
+    </array>
+    <key>Actions</key>
+    <array>
+        <dict>
+            <key>MacroActionType</key>
+            <string>ActivateApplication</string>
+            <key>Application</key>
+            <string>Visual Studio Code</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>TypeKeystroke</string>
+            <key>Keystroke</key>
+            <string>k</string>
+            <key>Modifiers</key>
+            <integer>256</integer> <!-- Command -->
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>TypeKeystroke</string>
+            <key>Keystroke</key>
+            <string>s</string>
+        </dict>
+    </array>
+</dict>
+
+<!-- 5. Run Project Tests -->
+<dict>
+    <key>Name</key>
+    <string>Run Project Tests</string>
+    <key>Triggers</key>
+    <array>
+        <dict>
+            <key>MacroTriggerType</key>
+            <string>HotKey</string>
+            <key>KeyCode</key>
+            <integer>17</integer> <!-- T -->
+            <key>Modifiers</key>
+            <integer>768</integer> <!-- Command+Shift -->
+        </dict>
+    </array>
+    <key>Actions</key>
+    <array>
+        <dict>
+            <key>MacroActionType</key>
+            <string>ActivateApplication</string>
+            <key>Application</key>
+            <string>Visual Studio Code</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>TypeKeystroke</string>
+            <key>Keystroke</key>
+            <string>`</string>
+            <key>Modifiers</key>
+            <integer>256</integer> <!-- Command -->
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>TypeKeystroke</string>
+            <key>Keystroke</key>
+            <string>npm test</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>TypeKeystroke</string>
+            <key>Keystroke</key>
+            <string>↩</string>
+        </dict>
+    </array>
+</dict>
+
+<!-- 6. Copy File Path -->
+<dict>
+    <key>Name</key>
+    <string>Copy File Path</string>
+    <key>Triggers</key>
+    <array>
+        <dict>
+            <key>MacroTriggerType</key>
+            <string>HotKey</string>
+            <key>KeyCode</key>
+            <integer>8</integer> <!-- C -->
+            <key>Modifiers</key>
+            <integer>768</integer> <!-- Command+Control -->
+        </dict>
+    </array>
+    <key>Actions</key>
+    <array>
+        <dict>
+            <key>MacroActionType</key>
+            <string>ActivateApplication</string>
+            <key>Application</key>
+            <string>Visual Studio Code</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>TypeKeystroke</string>
+            <key>Keystroke</key>
+            <string>k</string>
+            <key>Modifiers</key>
+            <integer>256</integer>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>TypeKeystroke</string>
+            <key>Keystroke</key>
+            <string>p</string>
+        </dict>
+    </array>
+</dict>
+
+<!-- 7. Open GitHub Repo -->
+<dict>
+    <key>Name</key>
+    <string>Open GitHub Repo</string>
+    <key>Triggers</key>
+    <array>
+        <dict>
+            <key>MacroTriggerType</key>
+            <string>HotKey</string>
+            <key>KeyCode</key>
+            <integer>5</integer> <!-- G -->
+            <key>Modifiers</key>
+            <integer>1310720</integer> <!-- Command+Option -->
+        </dict>
+    </array>
+    <key>Actions</key>
+    <array>
+        <dict>
+            <key>MacroActionType</key>
+            <string>ActivateApplication</string>
+            <key>Application</key>
+            <string>Google Chrome</string>
+        </dict>
+        <dict>
+            <key>MacroActionType</key>
+            <string>OpenURL</string>
+            <key>URL</key>
+            <string>https://github.com/3thi1xxx/axiom-trade</string>
+        </dict>
+    </array>
+</dict>
+
+    </array>
+    <key>Name</key>
+    <string>VS Code AI Macros</string>
+</dict>
+</array>
+</plist>

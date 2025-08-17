@@ -1,0 +1,55 @@
+{
+  "axiom": {
+    "wallet": {
+      "address": "WALLET_ADDRESS_PLACEHOLDER",
+      "privateKey": "PRIVATE_KEY_BASE58_PLACEHOLDER"
+    },
+    "api": {
+      "endpoints": [
+        "https://api3.axiom.trade",
+        "https://api6.axiom.trade",
+        "https://api7.axiom.trade",
+        "https://api8.axiom.trade"
+      ],
+      "primaryEndpoint": "https://api6.axiom.trade",
+      "timeoutMs": 7000,
+      "retryAttempts": 3
+    },
+    "trading": {
+      "maxSlippage": 0.01,
+      "maxPositionUSD": 25,
+      "minConfidenceThreshold": 0.6,
+      "maxPositionsOpen": 3,
+      "riskPerTrade": 0.02,
+      "stopLossPercent": 0.1,
+      "takeProfitPercent": 0.25
+    },
+    "signals": {
+      "trendingPeriod": "1h",
+      "maxTokenAge": 20,
+      "minLiquidity": 100,
+      "minVolume": 150,
+      "minVolumeToLiquidityRatio": 0.25,
+      "minMarketCap": 1000,
+      "maxMarketCap": 300000,
+      "maxTop10Holders": 30,
+      "preferredProtocol": "Raydium CPMM"
+    },
+    "safety": {
+      "dryRun": true,
+      "requireCouncilApproval": true,
+      "maxApiCallsPerMinute": 30,
+      "handshakeCooldownMs": 300000,
+      "trustThreshold": 0.7
+    },
+    "logging": {
+      "level": "info",
+      "includeTimestamp": true,
+      "logApiCalls": true,
+      "logTradeDecisions": true
+    }
+  },
+  "environment": "development",
+  "version": "2.0.0",
+  "lastUpdated": "2025-01-16T00:00:00Z"
+} 

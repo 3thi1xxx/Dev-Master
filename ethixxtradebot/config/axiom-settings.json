@@ -1,0 +1,46 @@
+{
+  "trading": {
+    "slippage": "5",
+    "priorityFeeSol": "0.001",
+    "bribeFeeSol": "0.001",
+    "maxFeeSol": "0.1",
+    "mevProtection": true,
+    "enhancedMevProtection": true,
+    "quickBuyDefault": "0.01"
+  },
+  "filters": {
+    "newPairs": {
+      "ageMin": 1,
+      "ageMax": 2,
+      "liquidityMin": 2000,
+      "protocols": ["pump", "raydium", "moonshot", "bonk", "boop", "launchLab", "virtualCurve", "jupiterStudio"]
+    },
+    "finalStretch": {
+      "protocols": ["pump", "raydium", "moonshot", "bonk", "boop", "launchLab", "virtualCurve", "jupiterStudio"]
+    },
+    "migrated": {
+      "protocols": ["pump", "raydium", "moonshot", "bonk", "boop", "launchLab", "virtualCurve", "jupiterStudio"]
+    }
+  },
+  "rpc": {
+    "heliusEndpoint": "https://mainnet.helius-rpc.com/?api-key=932bcef2-316c-46c6-b37c-702fe1ee79de",
+    "customRpcId": "43464bb1-0df3-4c2e-9e7d-20542fcd0060"
+  },
+  "ui": {
+    "primaryColor": "#526FFF",
+    "showVolume": true,
+    "showMarketCap": true,
+    "showSnipers": true,
+    "showInsiders": true,
+    "showBundlers": true
+  },
+  "quickSets": {
+    "solAmounts": ["0.001", "0.1", "1", "10", "0.25", "0.5", "2", "5"],
+    "percentages": ["10", "25", "50", "100"]
+  },
+  "extracted": {
+    "timestamp": "2025-08-13T08:26:07Z",
+    "source": "api6.axiom.trade/get-settings",
+    "userId": "64958bb1-3016-4780-8b09-f687062cfa20"
+  }
+} 

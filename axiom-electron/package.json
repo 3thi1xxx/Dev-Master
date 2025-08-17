@@ -1,0 +1,16 @@
+{
+  "name": "axiom-electron",
+  "version": "1.0.0",
+  "description": "Electron GUI for Axiom Pulse Scanner",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "node-fetch": "^2.6.11"
+  },
+  "devDependencies": {
+    "electron": "^37.2.0"
+  }
+}

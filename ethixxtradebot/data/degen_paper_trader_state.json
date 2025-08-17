@@ -1,0 +1,31 @@
+{
+  "balance": 421.875,
+  "positions": [
+    [
+      "FfLDvyFYK8qsaPp37teeYC5qjKWFnGYzTt61FR24pump",
+      {
+        "tokenAddress": "FfLDvyFYK8qsaPp37teeYC5qjKWFnGYzTt61FR24pump",
+        "symbol": "Smiley Cat",
+        "amount": 140.625,
+        "entryPrice": 0.000003,
+        "entryTime": 1755182404773,
+        "type": "DEGEN_YOLO",
+        "degenScore": 0.7380000000000001,
+        "fomoLevel": 0.7,
+        "hypeLevel": 0,
+        "riskLevel": "EXTREME_OPPORTUNITY"
+      }
+    ]
+  ],
+  "stats": {
+    "totalTrades": 0,
+    "winningTrades": 0,
+    "losingTrades": 0,
+    "totalProfit": 0,
+    "biggestWin": 0,
+    "biggestLoss": 0,
+    "currentStreak": 0,
+    "bestStreak": 0
+  },
+  "timestamp": 1755182404773
+}

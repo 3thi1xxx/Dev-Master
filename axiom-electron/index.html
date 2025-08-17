@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Axiom Pulse Scanner</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0fffcc;
+      font-family: sans-serif;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    button {
+      background-color: #00ffbb;
+      border: none;
+      padding: 10px 20px;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    table {
+      margin-top: 20px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Axiom Pulse Scanner</h1>
+  <button id="refreshBtn">Refresh</button>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Vol</th>
+        <th>Liq</th>
+        <th>MC</th>
+        <th>Score</th>
+        <th>Buy</th>
+      </tr>
+    </thead>
+    <tbody id="results"></tbody>
+  </table>
+
+  <script>
+    document.getElementById('refreshBtn').addEventListener('click', async () => {
+      const res = await window.api.fetchPulse();
+      const tbody = document.getElementById('results');
+      tbody.innerHTML = '';
+
+      if (res.error) {
+        alert("Error: " + res.error);
+        return;
+      }
+
+      for (const token of res.tokens) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${token.name || 'Unnamed'}</td>
+          <td>${(token.createdAt && ((Date.now() - new Date(token.createdAt).getTime()) / 60000).toFixed(1)) || 'N/A'}m</td>
+          <td>${token.volumeSol?.toFixed(2) || 0}</td>
+          <td>${token.liquiditySol?.toFixed(2) || 0}</td>
+          <td>${token.marketCapSol?.toFixed(0) || 0}</td>
+          <td>${token.score}</td>
+          <td><a href="https://jup.ag/swap/SOL-${token.token.address}" target="_blank">Buy</a></td>
+        `;
+        tbody.appendChild(row);
+      }
+    });
+  </script>
+</body>
+</html>

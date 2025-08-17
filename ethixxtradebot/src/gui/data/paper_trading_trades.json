@@ -1,0 +1,33 @@
+[
+  {
+    "tokenAddress": "Mmemeheh",
+    "amount": 30,
+    "openTime": 1755260322097,
+    "closeTime": 1755260328098,
+    "openPrice": 0,
+    "closePrice": 0,
+    "profit": null,
+    "returnPercent": null,
+    "duration": 6001,
+    "openScore": 7,
+    "closeScore": 7,
+    "openRecommendation": "RISKY",
+    "closeRecommendation": "RISKY"
+  },
+  {
+    "tokenAddress": "BUNNY",
+    "symbol": "BUNNY",
+    "amount": 30,
+    "openTime": 1755260788699,
+    "closeTime": 1755260789768,
+    "openPrice": 0,
+    "closePrice": 0,
+    "profit": null,
+    "returnPercent": null,
+    "duration": 1069,
+    "openScore": 7,
+    "closeScore": 7,
+    "openRecommendation": "RISKY",
+    "closeRecommendation": "RISKY"
+  }
+]

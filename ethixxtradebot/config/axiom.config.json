@@ -1,0 +1,9 @@
+{
+  "rpcUrl": "RPC_DISABLED",
+  "rpcUrls": [],
+  "maxSlippage": 0.01,
+  "maxPositionUSD": 25,
+  "pollMs": 5000,
+  "strategy": "sniper",
+  "dryRun": true
+} 

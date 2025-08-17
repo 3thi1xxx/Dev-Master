@@ -1,0 +1,38 @@
+═══════════════════════════════════════════════════════════════
+🚀 ETHIXXTRADEBOT - PREMIUM PLUS OPTIMIZED
+═══════════════════════════════════════════════════════════════
+📊 Birdeye Limits: 50 RPS | 15M CUs/month | 500 WebSockets
+💰 Starting capital: 0,000 (Paper Trading)
+🧪 TEST MODE: ON (Demo trades every 5 seconds)
+═══════════════════════════════════════════════════════════════
+
+📌 Dashboard: http://localhost:3000
+📌 Keep this terminal open!
+
+🔍 Checking token health...
+[TOKEN] 📄 Loaded tokens from axiom_tokens.env
+[TOKEN] 🔐 Axiom Token Manager initialized
+[TOKEN] Refresh token: Found
+[TOKEN] Access token: Found
+[dotenv@17.2.1] injecting env (8) from axiom_tokens.env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+
+🔍 CHECKING TOKEN HEALTH...
+
+📄 Loading tokens...
+✅ Tokens loaded from environment
+⏰ Access token expires in: -302 seconds
+⚠️ Access token EXPIRED - attempting refresh...
+[TOKEN] 🔄 Refreshing access token...
+[TOKEN] ❌ Failed to refresh token: Request failed with status code 500
+❌ Token refresh FAILED - manual update needed
+
+📋 TO FIX:
+1. Open https://axiom.trade in browser
+2. F12 → Application → Local Storage → axiom.trade
+3. Copy access_token and refresh_token
+4. Update axiom_tokens.env file
+
+❌ Token health check: FAIL
+
+❌ Token check failed - please update tokens before starting
+   See instructions above for extracting fresh tokens

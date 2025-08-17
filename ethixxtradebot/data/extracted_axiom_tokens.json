@@ -1,0 +1,17 @@
+{
+  "timestamp": 1755138445.3693209,
+  "source": "HAR_extraction",
+  "cookies": {},
+  "headers": {},
+  "websocket_urls": [
+    "wss://cluster7.axiom.trade/?",
+    "wss://eucalyptus.axiom.trade/ws?",
+    "wss://cluster7.axiom.trade/?",
+    "wss://eucalyptus.axiom.trade/ws?"
+  ],
+  "working_api_endpoints": [],
+  "connection_patterns": {
+    "successful_websockets": 2,
+    "successful_apis": 0
+  }
+}

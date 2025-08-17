@@ -1,0 +1,18 @@
+[
+  {
+    "tokenAddress": "0x1234567890abcdef",
+    "symbol": "TEST1",
+    "amount": 50,
+    "openTime": 1755176216856,
+    "closeTime": 1755176218859,
+    "openPrice": 0.001,
+    "closePrice": 0.0015,
+    "profit": 25,
+    "returnPercent": 50,
+    "duration": 2003,
+    "openScore": 85,
+    "closeScore": 45,
+    "openRecommendation": "STRONG_BUY",
+    "closeRecommendation": "AVOID"
+  }
+]

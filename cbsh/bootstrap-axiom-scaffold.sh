@@ -1,0 +1,171 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(pwd)"
+DROPS_DIR="${ROOT}/drops"
+DROP_PATH="${DROPS_DIR}/axiom-scaffold-v2.chatdrop.json"
+RELAY_SH="${ROOT}/cbsh/relay-chat-drop.sh"
+
+# --- helpers ---------------------------------------------------------------
+timestamp() { date -u +%s; }
+note(){ printf "\033[1;36m[axiom]\033[0m %s\n" "$*"; }
+err(){ printf "\033[1;31m[axiom:ERROR]\033[0m %s\n" "$*" >&2; }
+
+# derive relay port from manifest/tabmesh if present
+detect_port() {
+  node -e '
+    const fs=require("fs");
+    function j(p){ try{ return JSON.parse(fs.readFileSync(p,"utf8")); }catch{ return null } }
+    const cand=["manifest.json","mesh/TabMesh.json","TabMesh.json"];
+    let port=null;
+    for(const c of cand){
+      if(fs.existsSync(c)){
+        const m=j(c);
+        if(!m) continue;
+        port = (m.relay && m.relay.port) || m.port || (m.gateway && m.gateway.port) || null;
+        if(port) break;
+      }
+    }
+    process.stdout.write(String(port||3055));
+  ' 2>/dev/null
+}
+
+PORT="${PORT:-$(detect_port)}"
+KEY="${RELAY_KEY:-${RELAY_SECRET:-chad-relay-2025}}"
+BASE="http://localhost:${PORT}"
+
+mkdir -p "${DROPS_DIR}" cbsh
+
+# [... FULL CHATDROP CONTENT FROM ABOVE ...]
+# (Copy the entire script content provided above)
+# --- write chatdrop file (with timestamp substitution) ---------------------
+TS="$(timestamp)"
+note "writing chatdrop → ${DROP_PATH}"
+cat > "${DROP_PATH}.tmpl" <<'JSON'
+{  "drop_id": "axiom-scaffold-v2-{{TIMESTAMP}}",
+  "provider": "ChatGPT",
+  "dry_run": false,
+  "policy": { "require_council": false, "allow_fs_mutation": true },
+  "metadata": { "source": "legacy/axiom", "purpose": "axiom-adapter-scaffold-v2" },
+  "intents": [
+    { "kind": "file_write", "path": "agents/trading/AxiomAdapter.js", "mode": "0644",
+      "content": "/* LEGACY BOT MODULE – needs proof + GUI hookup\n * AxiomAdapter: normalize config, map signals->actions, action->effect\n */\nimport crypto from 'crypto';\n\nexport function normalizeConfig(raw = {}){\n  const { rpcUrl, rpcUrls = [], maxSlippage = 0.01, dryRun = true, maxPositionUSD = 25, pollMs = 5000, strategy = 'sniper' } = raw;\n  return { rpcUrl, rpcUrls, maxSlippage, dryRun, maxPositionUSD, pollMs, strategy };\n}\n\nexport function signalsToActions(signals = [], cfg){\n  return signals\n    .map(s => ({\n      type: 'OPEN_POSITION',\n      symbol: s.symbol || s.mint || s.token,\n      side: 'BUY',\n      reason: s.reason || 'trend',\n      confidence: s.score ?? 0.55,\n      maxSlippage: cfg.maxSlippage,\n      notionalUSD: Math.min(s.sizeUSD ?? 10, cfg.maxPositionUSD)\n    }))\n    .filter(a => a.symbol);\n}\n\nexport function actionToEffect(action){\n  const payload = { kind: 'trade_intent', action, ts: new Date().toISOString() };\n  payload.intent_id = crypto.createHash('sha256').update(JSON.stringify(payload)).digest('hex');\n  return payload;\n}\n\nexport default { normalizeConfig, signalsToActions, actionToEffect };\n" },
+    { "kind": "file_write", "path": "agents/trading/AxiomTraderAgent.js", "mode": "0644",
+      "content": "/* LEGACY BOT MODULE – needs proof + GUI hookup\n * AxiomTraderAgent: loads fixtures (offline), converts to actions, dispatches via relay.\n */\nimport fs from 'fs/promises';\nimport { normalizeConfig, signalsToActions, actionToEffect } from './AxiomAdapter.js';\nimport { relayDispatch } from '../../src/lib/relay-dispatch.js';\n\nasync function loadFixtures(){\n  // Offline-only: no network or wallet. Replace with real fetchers later.\n  let pulse = []; let tokens = [];\n  try { pulse = JSON.parse(await fs.readFile('fixtures/axiom/pulse.sample.json','utf8')).items || []; } catch{}\n  try { tokens = JSON.parse(await fs.readFile('fixtures/axiom/tokens.sample.json','utf8')).items || []; } catch{}\n  // naive mapping to signals\n  const fromPulse = pulse.slice(0,5).map(p => ({ symbol: p.symbol || p.mint || p.token, score: p.score ?? 0.62, sizeUSD: 10, reason: 'pulse' }));\n  const fromTokens = tokens.slice(0,5).map(t => ({ symbol: t.symbol || t.mint || t.token, score: t.score ?? 0.58, sizeUSD: 10, reason: 'token' }));\n  return [...fromPulse, ...fromTokens].filter(s => !!s.symbol);\n}\n\nexport async function runAxiom({ configPath = 'config/axiom.config.json' } = {}){\n  const rawCfg = JSON.parse(await fs.readFile(configPath,'utf8'));\n  const cfg = normalizeConfig(rawCfg);\n  const signals = await loadFixtures();\n  const actions = signalsToActions(signals, cfg);\n  const effects = actions.map(actionToEffect);\n\n  const drop = {\n    drop_id: `axiom-sim-${Date.now()}`,\n    provider: 'AxiomTraderAgent',\n    dry_run: cfg.dryRun !== false,\n    intents: effects,\n    policy: { require_council: true, max_risk_usd: cfg.maxPositionUSD },\n    metadata: { source: 'legacy/axiom', strategy: cfg.strategy }\n  };\n\n  const res = await relayDispatch('/dispatch', drop);\n  return { ok: res.ok, status: res.status, count: effects.length, relay: res.json };\n}\n\nif (process.argv[1] && process.argv[1].endsWith('AxiomTraderAgent.js')){\n  runAxiom().then(r=>{ console.log(JSON.stringify(r,null,2)); }).catch(e=>{ console.error(e); process.exit(1); });\n}\n" },
+    { "kind": "file_write", "path": "src/lib/relay-dispatch.js", "mode": "0644",
+      "content": "/* MEATBRAIN hook: relay client. Node 18+ (global fetch) required. */\nexport async function relayDispatch(path, body){\n  const url = `http://localhost:3055${path}`;\n  const resp = await fetch(url, {\n    method: 'POST',\n    headers: { 'Content-Type': 'application/json', 'X-Relay-Key': process.env.RELAY_KEY || process.env.RELAY_SECRET || 'chad-relay-2025' },\n    body: JSON.stringify(body)\n  });\n  const ok = resp.status >= 200 && resp.status < 300;\n  return { ok, status: resp.status, json: ok ? await resp.json() : await resp.text() };\n}\nexport default { relayDispatch };\n" },
+    { "kind": "file_write", "path": "agents/trading/wallet-stub.js", "mode": "0644",
+      "content": "/* LEGACY BOT MODULE – needs proof + GUI hookup */\nexport function getWallet(){ return { pubkey:'WALLET_DISABLED', canSign:false, mode:'stub' }; }\nexport default { getWallet };\n" },
+    { "kind": "file_write", "path": "agents/trading/rpc-provider.js", "mode": "0644",
+      "content": "/* LEGACY BOT MODULE – needs proof + GUI hookup */\nexport function resolveRpc(cfg){ return cfg.rpcUrl || (cfg.rpcUrls && cfg.rpcUrls[0]) || 'RPC_DISABLED'; }\nexport default { resolveRpc };\n" },
+    { "kind": "file_write", "path": "config/axiom.config.json", "mode": "0644",
+      "content": "{\n  \"rpcUrl\": \"RPC_DISABLED\",\n  \"rpcUrls\": [],\n  \"maxSlippage\": 0.01,\n  \"maxPositionUSD\": 25,\n  \"pollMs\": 5000,\n  \"strategy\": \"sniper\",\n  \"dryRun\": true\n}\n" },
+    { "kind": "file_write", "path": "config/axiom.config.schema.json", "mode": "0644",
+      "content": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"title\": \"Axiom Config\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"rpcUrl\": {\"type\":\"string\"},\n    \"rpcUrls\": {\"type\":\"array\",\"items\":{\"type\":\"string\"}},\n    \"maxSlippage\": {\"type\":\"number\",\"minimum\":0,\"maximum\":0.2},\n    \"maxPositionUSD\": {\"type\":\"number\",\"minimum\":1},\n    \"pollMs\": {\"type\":\"number\",\"minimum\":500},\n    \"strategy\": {\"type\":\"string\"},\n    \"dryRun\": {\"type\":\"boolean\"}\n  },\n  \"required\": [\"maxSlippage\",\"maxPositionUSD\",\"dryRun\"],\n  \"additionalProperties\": true\n}\n" },
+    { "kind": "file_write", "path": "config/axiom-policy.json", "mode": "0644",
+      "content": "{\n  \"version\": 1,\n  \"require_council_for_sell\": true,\n  \"require_council_below_conf\": 0.75,\n  \"banlist\": [],\n  \"allowlist\": []\n}\n" },
+    { "kind": "file_write", "path": "cbsh/dispatch-axiom-sim.sh", "mode": "0755",
+      "content": "#!/usr/bin/env bash\nset -euo pipefail\nexport RELAY_KEY=\"${RELAY_KEY:-${RELAY_SECRET:-chad-relay-2025}}\"\nnode agents/trading/AxiomTraderAgent.js\n" },
+    { "kind": "file_write", "path": "cbsh/axiom-sim-proof.sh", "mode": "0755",
+      "content": "#!/usr/bin/env bash\nset -euo pipefail\nexport RELAY_KEY=\"${RELAY_KEY:-${RELAY_SECRET:-chad-relay-2025}}\"\nnode --test tests/axiom/adapter.test.mjs\nnode scripts/axiomProofRunner.mjs \"$@\"\necho \"\n✅ Axiom proof complete. See reports/axiom-proof.html\"\n" },
+    { "kind": "file_write", "path": "scripts/axiomProofRunner.mjs", "mode": "0644",
+      "content": "/* MEATBRAIN proof runner: unit test already ran; now do a dry-run dispatch and write a report. */\nimport fs from 'fs/promises';\nimport http from 'http';\nimport { runAxiom } from '../agents/trading/AxiomTraderAgent.js';\n\nfunction nowISO(){ return new Date().toISOString(); }\nasync function ping(){\n  return new Promise(res=>{\n    const req = http.request({ hostname:'localhost', port:3055, path:'/status', method:'GET', timeout:800 }, r=>{ res(r.statusCode||0); });\n    req.on('error', ()=>res(0)); req.on('timeout', ()=>{req.destroy(); res(0)}); req.end();\n  });\n}\n\nconst args = process.argv.slice(2);\nconst durArg = args.find(a=>a.startsWith('--duration='));\nconst duration = durArg ? Number(durArg.split('=')[1]) : 30;\n\nconst status = await ping();\nconst ran = await runAxiom();\nconst html = `<!doctype html><html><head><meta charset=\\\"utf-8\\\"><title>Axiom Proof</title></head><body>\n<h1>Axiom Proof (paper)</h1>\n<p>Generated: ${nowISO()}</p>\n<ul>\n<li>/status: ${status}</li>\n<li>dispatch.ok: ${ran.ok} (HTTP ${ran.status})</li>\n<li>effects sent: ${ran.count}</li>\n</ul>\n<pre>${JSON.stringify(ran.relay, null, 2)}</pre>\n</body></html>`;\nawait fs.mkdir('reports', { recursive:true });\nawait fs.writeFile('reports/axiom-proof.html', html);\nconsole.log(JSON.stringify({ status, ran }, null, 2));\n" },
+    { "kind": "file_write", "path": "agent_memory/axiom-trader.agent.md", "mode": "0644",
+      "content": "# AxiomTraderAgent\nrole: adapter\ngoal: convert Axiom-like signals into trade intents via relay (dry-run)\ninputs: config/axiom.config.json, fixtures/axiom/*.json\noutputs: intents -> /dispatch (dry-run default)\ntrust: start_low\nsafety: requires council for live, respects trust-policy limits\nproof: PMAC + vault-log anchored; reports/axiom-proof.html\nhooks: summarize-axiom-trader.md, score-axiom-trader.md\n" },
+    { "kind": "file_write", "path": "agent_summaries/summarize-axiom-trader.md", "mode": "0644",
+      "content": "Summary: AxiomTraderAgent turns offline Axiom-like fixtures into trade intents with council gating and dry-run dispatch.\n" },
+    { "kind": "file_write", "path": "agent_scores/score-axiom-trader.md", "mode": "0644",
+      "content": "Score: 0.0\nRationale: scaffold pending live wire + council vetting.\n" },
+    { "kind": "file_write", "path": "tests/axiom/adapter.test.mjs", "mode": "0644",
+      "content": "import test from 'node:test';\nimport assert from 'node:assert/strict';\nimport { normalizeConfig, signalsToActions, actionToEffect } from '../../agents/trading/AxiomAdapter.js';\n\ntest('adapter transforms', ()=>{\n  const cfg = normalizeConfig({ maxPositionUSD: 25 });\n  const actions = signalsToActions([{ symbol:'SOL', score:0.8, sizeUSD:12 }], cfg);\n  assert.equal(actions[0].symbol, 'SOL');\n  const eff = actionToEffect(actions[0]);\n  assert.equal(eff.intent_id.length, 64);\n});\n" },
+    { "kind": "file_write", "path": "src/executors/trade-intent-sim.js", "mode": "0644",
+      "content": "/* Minimal sim executor: orchestrator logs receipt; always ok in dry-run. */\nexport async function simulateTradeIntent(intent, policy){\n  return { ok: true, dry_run: true, symbol: intent.action?.symbol ?? null };\n}\nexport default { simulateTradeIntent };\n" },
+    { "kind": "file_write", "path": "fixtures/axiom/pulse.sample.json", "mode": "0644",
+      "content": "{\n  \"items\": [\n    { \"symbol\": \"SOL\", \"score\": 0.78 },\n    { \"symbol\": \"BONK\", \"score\": 0.66 },\n    { \"symbol\": \"WIF\", \"score\": 0.62 }\n  ]\n}\n" },
+    { "kind": "file_write", "path": "fixtures/axiom/tokens.sample.json", "mode": "0644",
+      "content": "{\n  \"items\": [\n    { \"symbol\": \"SOL\", \"score\": 0.60 },\n    { \"symbol\": \"JUP\", \"score\": 0.59 },\n    { \"symbol\": \"PYTH\", \"score\": 0.58 }\n  ]\n}\n" },
+    { "kind": "file_write", "path": "src/lib/project-locator.mjs", "mode": "0644",
+      "content": "/* Project locator: read manifest/TabMesh to find GUI/queue paths (future hooks). */\nimport fs from 'fs';\nexport function readJSON(p){ try{ return JSON.parse(fs.readFileSync(p,'utf8')); }catch{ return null } }\nexport function locate(){\n  const tries = ['manifest.json','mesh/TabMesh.json','TabMesh.json'];\n  for(const t of tries){ try{ if(fs.existsSync(t)) return { path:t, json: readJSON(t) }; }catch{} }\n  return { path:null, json:null };\n}\nexport default { locate };\n" }
+  ]
+}
+JSON
+
+# substitute timestamp
+perl -0777 -pe "s/\\{\\{TIMESTAMP\\}\\}/$TS/g" "${DROP_PATH}.tmpl" > "${DROP_PATH}"
+rm -f "${DROP_PATH}.tmpl"
+note "chatdrop ready with drop_id suffix: ${TS}"
+
+# --- create relay-chat-drop.sh if missing ----------------------------------
+if [[ ! -x "${RELAY_SH}" ]]; then
+  note "creating ${RELAY_SH}"
+  cat > "${RELAY_SH}" <<'SH'
+#!/usr/bin/env bash
+set -euo pipefail
+FILE="${1:-}"
+if [[ -z "${FILE}" || ! -f "${FILE}" ]]; then echo "usage: cbsh/relay-chat-drop.sh <path-to-chatdrop.json>"; exit 2; fi
+PORT="${PORT:-3055}"
+KEY="${RELAY_KEY:-${RELAY_SECRET:-chad-relay-2025}}"
+BASE="http://localhost:${PORT}"
+
+send(){
+  local PATH="$1"
+  local CODE
+  CODE=$(curl -sS -w "%{http_code}" -o /tmp/chatdrop.res -X POST \
+    -H "Content-Type: application/json" -H "X-Relay-Key: ${KEY}" \
+    --data-binary @"${FILE}" "${BASE}${PATH}" || true)
+  echo "${CODE}"
+}
+
+CODE=$(send "/chatdrop")
+if [[ "${CODE}" == "404" || "${CODE}" == "400" || "${CODE}" == "000" ]]; then
+  echo "[relay] /chatdrop returned ${CODE}, trying /dispatch…"
+  CODE=$(send "/dispatch")
+fi
+
+echo "[relay] HTTP ${CODE}"
+echo "----- response -----"
+cat /tmp/chatdrop.res || true
+echo "--------------------"
+[[ "${CODE}" =~ ^2 ]] || exit 3
+SH
+  chmod +x "${RELAY_SH}"
+else
+  note "found ${RELAY_SH}"
+fi
+
+# --- ensure relay is running -----------------------------------------------
+status_code=$(curl -s -o /dev/null -w "%{http_code}" "${BASE}/status" || true)
+if [[ "${status_code}" != "200" ]]; then
+  note "relay not up on ${BASE}; trying to start…"
+  CAND=("src/relay/ClaudeRelayOrchestrator.mjs" "ClaudeRelayOrchestrator.mjs")
+  started="false"
+  for c in "${CAND[@]}"; do
+    if [[ -f "${ROOT}/${c}" ]]; then
+      note "starting node ${c} &"
+      (node "${c}" >/dev/null 2>&1 &) || true
+      started="true"
+      break
+    fi
+  done
+  [[ "${started}" == "true" ]] || err "could not find ClaudeRelayOrchestrator.mjs (tried ${CAND[*]})."
+  # wait up to ~10s
+  for i in {1..20}; do
+    sleep 0.5
+    status_code=$(curl -s -o /dev/null -w "%{http_code}" "${BASE}/status" || true)
+    [[ "${status_code}" == "200" ]] && break
+  done
+fi
+[[ "${status_code}" == "200" ]] || err "relay still not responding on ${BASE}/status (HTTP ${status_code})."
+
+# --- dispatch the chatdrop --------------------------------------------------
+note "dispatching chatdrop to ${BASE}"
+PORT="${PORT}" RELAY_KEY="${KEY}" bash "${RELAY_SH}" "${DROP_PATH}" || { err "chatdrop dispatch failed"; exit 3; }
+
+# --- run proof (created by the chatdrop) -----------------------------------
+if [[ -x "${ROOT}/cbsh/axiom-sim-proof.sh" ]]; then
+  note "running proof: cbsh/axiom-sim-proof.sh --duration 30"
+  RELAY_KEY="${KEY}" bash "${ROOT}/cbsh/axiom-sim-proof.sh" --duration 30 || true
+else
+  err "proof script not found (cbsh/axiom-sim-proof.sh). Did the chatdrop write files?"
+fi
+note "done. open reports/axiom-proof.html if present."

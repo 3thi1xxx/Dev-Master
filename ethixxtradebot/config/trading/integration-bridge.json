@@ -1,0 +1,47 @@
+{
+  "description": "Integration bridge for existing Axiom projects",
+  "mappings": {
+    "from_existing": {
+      "LIVE_MODE": "USE_MOCK_DATA (inverted)",
+      "AXIOM_API_HOSTS": "AXIOM_ENDPOINT_BASE",
+      "SOLANA_PRIVATE_KEY_BASE58": "SOLANA_PRIVATE_KEY",
+      "AUTH_WALLET": "AUTH_WALLET",
+      "AXIOM_AUTH_SERVERS": "AXIOM_API_HOSTS"
+    },
+    "projects": {
+      "chad-lockdown-spine": {
+        "location": "chad-lockdown-spine/.env",
+        "has_live_keys": true,
+        "executor_ready": false,
+        "notes": "Main orchestrator project with relay system"
+      },
+      "new_axiom_trade": {
+        "location": "new axiom trade/axiom-trade/.env", 
+        "has_live_keys": true,
+        "executor_ready": false,
+        "notes": "Legacy trading system"
+      },
+      "axiom_sniper": {
+        "location": "axiom-sniper/",
+        "has_live_keys": false,
+        "executor_ready": false,
+        "notes": "Latency checking and trending fetcher"
+      }
+    }
+  },
+  "migration_path": {
+    "step1": "Copy SOLANA_PRIVATE_KEY_BASE58 from existing .env to .env.dev when ready for live mode",
+    "step2": "Set USE_MOCK_DATA=false and EXECUTOR=Jupiter for live trading",
+    "step3": "Use AXIOM_API_HOSTS from existing config for multi-endpoint support",
+    "step4": "Integrate with chad-lockdown-spine relay system"
+  },
+  "ready_for_live": {
+    "requirements": [
+      "Copy real SOLANA_PRIVATE_KEY_BASE58",
+      "Verify AUTH_WALLET matches",
+      "Test stealth handshake with real endpoints",
+      "Enable executor (Dummy -> Jupiter)",
+      "Set USE_MOCK_DATA=false"
+    ]
+  }
+} 

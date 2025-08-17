@@ -1,0 +1,1553 @@
+🎯 AXIOM TRADING SYSTEM STARTUP
+===============================
+🔧 Loading Axiom trading environment...
+✅ AXIOM_ACCESS_TOKEN: eyJhbGci...
+✅ AXIOM_REFRESH_TOKEN: eyJhbGci...
+✅ AXIOM_API_PRIMARY: https://api6.axiom.trade
+✅ AXIOM_REFRESH_ENDPOINT: https://api7.axiom.trade/refresh-access-token
+✅ AXIOM_WS_CLUSTER: wss://cluster7.axiom.trade/
+✅ AXIOM_WS_WHALE_FEED: wss://eucalyptus.axiom.trade/ws
+✅ AXIOM_USER_ID: 64958bb1-3016-4780-8b09-f687062cfa20
+✅ BIRDEYE_API_KEY: f31ad137...
+🚀 Environment loaded successfully
+
+🔍 Verifying critical environment variables...
+✅ Found: BIRDEYE_API_KEY (32 chars)
+✅ All critical environment variables verified
+
+🚀 Starting Axiom Trading System...
+Dashboard will be available at: http://localhost:3000
+
+📈 ADVANCED TECHNICAL ANALYSIS ENGINE INITIALIZED
+🔧 Real indicators: RSI, MACD, Bollinger Bands, Stochastic, ADX, etc.
+2025-08-18 10:31:09.923514: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+🧠 NEURAL PATTERN LEARNING ENGINE INITIALIZED
+🤖 TensorFlow.js model for token success prediction
+📊 Architecture: 20 inputs → 64→32→16 → 3 outputs
+🐦 BIRDEYE ANALYTICS INTEGRATION INITIALIZED
+🔍 Solana-specific advanced analytics and security analysis
+📊 Token metrics, holder analysis, risk assessment
+✅ Birdeye API key configured
+🧠 CLUSTER7 INTELLIGENCE ENGINE INITIALIZED
+🎯 Advanced pattern recognition for profitable trades
+📊 Real-time market sentiment analysis
+[TOKEN] 📄 Loaded tokens from axiom_tokens.env
+[TOKEN] 🔐 Axiom Token Manager initialized
+[TOKEN] Refresh token: Found
+[TOKEN] Access token: Found
+[TOKEN] 🔄 5 refresh endpoints configured
+[SHARED-WS] 🌐 SharedWebSocketManager initialized
+[SHARED-WS] 📋 Replicating browser's exact sharing pattern
+[TOKEN] Token expires in -338750s
+[WHALE] 🐋 Wallet Loaded: dd-whale (HVXwMgm5PZoTS7gyQKV9WXJzArGzsVHen2dgbTfFo7uB) - Priority: normal
+[WHALE] 🐋 Wallet Loaded: active-whale-1 (ENi5uKnSAT7GKXGyv6PUadpSg3xtVUHyuqMiB38vsF49) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-2 (HL3FZ8XWnLnn1HuktmgpNRyFRjuAxWbXNQVj5fPPzZwt) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-3 (8VSY68Jyv27oZ89VYxHhKAXffpDgRdLu6AvsxDYEELDh) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-4 (8uKHhvfchYui9XxnTMLXjVQwtawJEWaozbBbtAAigYkX) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-5 (qNGhUruCGJpXJdsnV74USHErcbm3CrXRsnP8D6Z34Hh) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-6 (3dL64A9WvMp8seH6xSs4cAsLdSFec9ocWUPuSptwhKrV) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-7 (6E6H2zicRB8LRPpSQjzhs1HXsbXWHXczhbdXHgAAvH1r) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-8 (Dsi8ntQziuCPt16TStjG4tgviracSryHsRcH72zbwRgu) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-9 (2oYpBE8iDLtge4KQHVgeyRR4Hu9hAsCfdLUDmcuCNE4v) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-10 (DnCxaCJmGZoxQEyP9uNh3e8WzRM4gKvgMq7WhsM2EdVo) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-11 (6DJjAgu4PEcZAaYSqPuQb94XwVBUtBZyqSrKVM5JFi71) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-12 (C2mSwXA4ycq2whFLqnxBP9Ye5cWDhvccJ44EM2HSG5UD) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-13 (BbwF4wSwmxMVp7xubA7qigCUU6RMcvK2soMu8VrDHjDH) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-14 (irWszHJBU15degpk2nCDr3TmZxa7xoJCHzwd68p5Rtx) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-1 (9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-2 (2qzVGSsqLGoFgXzjhikVwjf1j5EeZc8h8T3bQl6U9r2e) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-3 (7dHbWXmci3MonEnCFhfHaJ3ArFqCjHRAb6vCxSKCCJzZ) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-4 (4RkMGLSs7LPz9mq5XJjhVGz85tVdC9hQRkV2u7mCjLfP) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-5 (BzKtVpN9djKSCEVjgSmgShWn4Q7PcZqHjvR3FdCKLbtN) - Priority: high
+[WHALE] 🐋 Wallet Loaded: live-whale-1 (Hr5QiiFSmc8g1KgT6RKUNjvXyeZmrXrU9QBPAQonXE9Z) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-2 (12cx2hq3pSWr3s1uRxpZfeQqFXAq6RBD2mntE4fZgLLU) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-3 (3Z8Mb13HbP9tXvztQttFCxV3nHUrAdYtd1piZjZjsfJV) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-4 (BiGJ8Um8b4vbsBpVypqC2srSJQmQuzKLNQ7TXZz1AZNb) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-5 (AK47fTuasQZE4bHaFLmgH5iMFQLZ9VhSJmK3prqQh4HM) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: auto-discovered-1755095106070 (HiAR1VFegM2cnWE5ry8raB3ao1akcU1XZHHespxi82PG) - Priority: high
+[WHALE] 🐋 Wallet Loaded: auto-discovered-1755095106075 (irWszHJBU15degpk2nCDr3TmZxa7xoJCHzwd68p5Rtx) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-RUMOR-1755129774 (HiAR1VFegM2cnWE5ry8raB3ao1akcU1XZHHespxi82PG) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-MOON-1755129775 (irWszHJBU15degpk2nCDr3TmZxa7xoJCHzwd68p5Rtx) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-DREV-1755129775 (8mJFQWWdDKrV6FZbZ4bGjS7pZ1y2E3tKrYq4oQX5cJkL) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-NOVA-1755129809 (9kL8FqR3vM2pN5xT7yHbS4wE6gD1uC8vB7nQ2zX5cAjI) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-FLUX-1755129824 (3nP7qL9R2M8dK6tG5sF4wY1xE0vC8uB9zA2nX7cH5jKl) - Priority: high
+[WHALE] ✅ Loaded 29 tracked wallets
+🐋 WHALE DATA SERVICE INITIALIZED
+📋 Tracking 29 whale wallets
+🔗 WebSocket: wss://eucalyptus.axiom.trade/ws
+[WHALE-INTEL] 🔗 Connected to whale data service
+🧠 WHALE INTELLIGENCE ENGINE INITIALIZED
+📊 Whale score weight: 15%
+🎯 Min whale confidence: 60%
+🐋 CABALSPY INTEGRATION INITIALIZED
+🔗 Base URL: https://api.cabalspy.xyz
+📊 Free whale tracking: ENABLED
+🫧 BUBBLEMAPS INTEGRATION INITIALIZED
+🔗 Base URL: https://api.bubblemaps.io
+📊 Free token flow analysis: ENABLED
+🦎 GECKOTERMINAL INTEGRATION INITIALIZED
+🔗 Base URL: https://api.geckoterminal.com/api/v2
+📊 Free market data: ENABLED
+🔥 DEGEN INTELLIGENCE INITIALIZED
+🎯 Degen Mode: ENABLED
+⚡ Risk Tolerance: EXTREME
+🚀 FOMO Threshold: 15%
+💎 Hype Multiplier: 3x
+🚀 ENHANCED EXTERNAL ANALYSIS INTEGRATOR INITIALIZED
+🧠 Neural Learning + 📈 Technical Analysis + 🐦 Birdeye + 🌐 DexScreener + 🧠 Cluster7 Intelligence + 🐋 Whale Intelligence + 🐋 Cabalspy + 🫧 Bubblemaps + 🦎 GeckoTerminal + 🔥 Degen Intelligence
+🔬 Ultimate multi-source token analysis engine with advanced pattern recognition
+🐦 BIRDEYE WEBSOCKET MANAGER INITIALIZED
+📡 Max concurrent connections: 500
+🚀 Real-time token tracking ready!
+🔄 Pre-warming connection pool...
+📊 PAPER TRADING SIMULATOR INITIALIZED
+💰 Starting Balance: $1000
+📈 Max Position Size: $75
+🎯 Max Concurrent Positions: 6
+🔬 Testing AI predictions with live data
+🐋 Whale copy trading: ENABLED
+🐦 Connected to Birdeye WebSocket for real-time price tracking
+🔥 DEGEN PAPER TRADER INITIALIZED
+💰 Starting Balance: $1000
+🎯 Degen Mode: ENABLED
+⚡ Degen Threshold: 50%
+🚀 YOLO Threshold: 60%
+💎 Max Position Size: $200
+🎲 Max Positions: 8
+🚀 AXIOM API SERVICE INITIALIZED
+📡 Base URL: https://api9.axiom.trade
+⏱️ Rate limit: 100 requests per minute
+⚡ FAST MEME ANALYZER INITIALIZED
+🚀 Ultra-speed token detection (<2s analysis)
+🎯 Focus: Momentum + Whale Activity + Holder Growth
+📈 MOMENTUM TRACKER INITIALIZED
+⚡ Real-time price & volume momentum detection
+🔍 Axiom Token Resolver initialized
+⚡ LIVE TOKEN ANALYZER INITIALIZED
+🔗 Bridging cluster7 feed → AI analysis → Dashboard
+🐋 Whale tracking: ENABLED
+📊 Auto-analysis: ENABLED
+[WHALE] 🐋 Wallet Loaded: dd-whale (HVXwMgm5PZoTS7gyQKV9WXJzArGzsVHen2dgbTfFo7uB) - Priority: normal
+[WHALE] 🐋 Wallet Loaded: active-whale-1 (ENi5uKnSAT7GKXGyv6PUadpSg3xtVUHyuqMiB38vsF49) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-2 (HL3FZ8XWnLnn1HuktmgpNRyFRjuAxWbXNQVj5fPPzZwt) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-3 (8VSY68Jyv27oZ89VYxHhKAXffpDgRdLu6AvsxDYEELDh) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-4 (8uKHhvfchYui9XxnTMLXjVQwtawJEWaozbBbtAAigYkX) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-5 (qNGhUruCGJpXJdsnV74USHErcbm3CrXRsnP8D6Z34Hh) - Priority: high
+[WHALE] 🐋 Wallet Loaded: active-whale-6 (3dL64A9WvMp8seH6xSs4cAsLdSFec9ocWUPuSptwhKrV) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-7 (6E6H2zicRB8LRPpSQjzhs1HXsbXWHXczhbdXHgAAvH1r) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-8 (Dsi8ntQziuCPt16TStjG4tgviracSryHsRcH72zbwRgu) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-9 (2oYpBE8iDLtge4KQHVgeyRR4Hu9hAsCfdLUDmcuCNE4v) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-10 (DnCxaCJmGZoxQEyP9uNh3e8WzRM4gKvgMq7WhsM2EdVo) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-11 (6DJjAgu4PEcZAaYSqPuQb94XwVBUtBZyqSrKVM5JFi71) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-12 (C2mSwXA4ycq2whFLqnxBP9Ye5cWDhvccJ44EM2HSG5UD) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-13 (BbwF4wSwmxMVp7xubA7qigCUU6RMcvK2soMu8VrDHjDH) - Priority: high
+[WHALE] 🐋 Wallet Loaded: new-whale-14 (irWszHJBU15degpk2nCDr3TmZxa7xoJCHzwd68p5Rtx) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-1 (9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-2 (2qzVGSsqLGoFgXzjhikVwjf1j5EeZc8h8T3bQl6U9r2e) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-3 (7dHbWXmci3MonEnCFhfHaJ3ArFqCjHRAb6vCxSKCCJzZ) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-4 (4RkMGLSs7LPz9mq5XJjhVGz85tVdC9hQRkV2u7mCjLfP) - Priority: high
+[WHALE] 🐋 Wallet Loaded: screenshot-whale-5 (BzKtVpN9djKSCEVjgSmgShWn4Q7PcZqHjvR3FdCKLbtN) - Priority: high
+[WHALE] 🐋 Wallet Loaded: live-whale-1 (Hr5QiiFSmc8g1KgT6RKUNjvXyeZmrXrU9QBPAQonXE9Z) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-2 (12cx2hq3pSWr3s1uRxpZfeQqFXAq6RBD2mntE4fZgLLU) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-3 (3Z8Mb13HbP9tXvztQttFCxV3nHUrAdYtd1piZjZjsfJV) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-4 (BiGJ8Um8b4vbsBpVypqC2srSJQmQuzKLNQ7TXZz1AZNb) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: live-whale-5 (AK47fTuasQZE4bHaFLmgH5iMFQLZ9VhSJmK3prqQh4HM) - Priority: highest
+[WHALE] 🐋 Wallet Loaded: auto-discovered-1755095106070 (HiAR1VFegM2cnWE5ry8raB3ao1akcU1XZHHespxi82PG) - Priority: high
+[WHALE] 🐋 Wallet Loaded: auto-discovered-1755095106075 (irWszHJBU15degpk2nCDr3TmZxa7xoJCHzwd68p5Rtx) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-RUMOR-1755129774 (HiAR1VFegM2cnWE5ry8raB3ao1akcU1XZHHespxi82PG) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-MOON-1755129775 (irWszHJBU15degpk2nCDr3TmZxa7xoJCHzwd68p5Rtx) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-DREV-1755129775 (8mJFQWWdDKrV6FZbZ4bGjS7pZ1y2E3tKrYq4oQX5cJkL) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-NOVA-1755129809 (9kL8FqR3vM2pN5xT7yHbS4wE6gD1uC8vB7nQ2zX5cAjI) - Priority: high
+[WHALE] 🐋 Wallet Loaded: FIXED-FLUX-1755129824 (3nP7qL9R2M8dK6tG5sF4wY1xE0vC8uB9zA2nX7cH5jKl) - Priority: high
+[WHALE] ✅ Loaded 29 tracked wallets
+🐋 WHALE DATA SERVICE INITIALIZED
+📋 Tracking 29 whale wallets
+🔗 WebSocket: wss://eucalyptus.axiom.trade/ws
+📈 ADVANCED TECHNICAL ANALYSIS ENGINE INITIALIZED
+🔧 Real indicators: RSI, MACD, Bollinger Bands, Stochastic, ADX, etc.
+🧠 NEURAL PATTERN LEARNING ENGINE INITIALIZED
+🤖 TensorFlow.js model for token success prediction
+📊 Architecture: 20 inputs → 64→32→16 → 3 outputs
+🧠 CLUSTER7 INTELLIGENCE ENGINE INITIALIZED
+🎯 Advanced pattern recognition for profitable trades
+📊 Real-time market sentiment analysis
+[WHALE-INTEL] 🔗 Connected to whale data service
+🧠 WHALE INTELLIGENCE ENGINE INITIALIZED
+📊 Whale score weight: 15%
+🎯 Min whale confidence: 60%
+🐋 CABALSPY INTEGRATION INITIALIZED
+🔗 Base URL: https://api.cabalspy.xyz
+📊 Free whale tracking: ENABLED
+🫧 BUBBLEMAPS INTEGRATION INITIALIZED
+🔗 Base URL: https://api.bubblemaps.io
+📊 Free token flow analysis: ENABLED
+🦎 GECKOTERMINAL INTEGRATION INITIALIZED
+🔗 Base URL: https://api.geckoterminal.com/api/v2
+📊 Free market data: ENABLED
+🔥 DEGEN INTELLIGENCE INITIALIZED
+🎯 Degen Mode: ENABLED
+⚡ Risk Tolerance: EXTREME
+🚀 FOMO Threshold: 15%
+💎 Hype Multiplier: 3x
+🚀 ENHANCED EXTERNAL ANALYSIS INTEGRATOR INITIALIZED
+🧠 Neural Learning + 📈 Technical Analysis + 🐦 Birdeye + 🌐 DexScreener + 🧠 Cluster7 Intelligence + 🐋 Whale Intelligence + 🐋 Cabalspy + 🫧 Bubblemaps + 🦎 GeckoTerminal + 🔥 Degen Intelligence
+🔬 Ultimate multi-source token analysis engine with advanced pattern recognition
+[TAX-TRACKER] 📊 Loaded 1 existing trade records
+📊 PAPER TRADING SIMULATOR INITIALIZED
+💰 Starting Balance: $1000
+📈 Max Position Size: $75
+🎯 Max Concurrent Positions: 6
+🔬 Testing AI predictions with live data
+🐋 Whale copy trading: ENABLED
+🐦 Connected to Birdeye WebSocket for real-time price tracking
+🔥 DEGEN PAPER TRADER INITIALIZED
+💰 Starting Balance: $1000
+🎯 Degen Mode: ENABLED
+⚡ Degen Threshold: 50%
+🚀 YOLO Threshold: 60%
+💎 Max Position Size: $200
+🎲 Max Positions: 8
+[MASTER] 🎮 Master Controller initialized
+[MASTER] ⚙️ Mode: FULL
+🌉 WebSocket Data Bridge initializing...
+🚀 AXIOM TRADE DASHBOARD SERVER STARTING...
+🖥️ Setting up GUI endpoints and real-time connections
+[ENHANCED] 🚀 Initializing all analysis components...
+[NEURAL] 🆕 Creating new model...
+[NEURAL] ✅ New model created
+[TOKEN] ⚠️ Access token expired, refreshing...
+[TOKEN] 🔄 Refreshing access token... (9)
+[ENHANCED] 🧠 Neural learning initialized
+[ENHANCED] ✅ All components initialized successfully
+[SERVER] ✅ Enhanced analysis system initialized
+[SERVER] 🔗 Setting up live token analyzer...
+[SERVER] 📡 Setting up enhanced live feed...
+[SERVER] 🎮 Starting with Master Controller integration...
+[MASTER] 🚀 Initializing all system components...
+[MASTER] ⚡ Initializing RPC optimization...
+[GATEWAY] 🌐 Initializing gateway optimizer...
+[GATEWAY] 🔍 Discovering available gateways...
+✅ 10 connections ready in pool
+[TOKEN] 📝 Updated env file with new token and endpoint
+[TOKEN] ✅ Access token refreshed successfully via 9
+[TOKEN] 🔄 Auto-refresh scheduled every 14 minutes
+[SHARED-WS] ✅ Token manager initialized
+[GATEWAY] ✅ frankfurt: 897ms
+[GATEWAY] ✅ frankfurt-alt: 1033ms
+[GATEWAY] 📊 Discovered 2/7 gateways
+[GATEWAY] ✅ Best gateway: frankfurt (897ms)
+[MASTER] ✅ RPC optimization ready
+[MASTER] 📊 Initializing tax tracking...
+[TAX-TRACKER] 📊 Loaded 1 existing trade records
+[MASTER] ✅ Tax tracking ready
+[MASTER] ⏸️ Pump.fun sniper DISABLED (enable with enablePumpSniping: true)
+[MASTER] 🐋 Initializing whale tracking...
+[MASTER] ✅ Whale tracking ready
+[MASTER] 💰 Initializing trading engines...
+[MASTER] ✅ Trading engines ready
+[MASTER] 🧠 Initializing analysis pipeline...
+[MASTER] ✅ Analysis pipeline ready
+[MASTER] 🔌 Connecting component events...
+[MASTER] ✅ Component events connected
+[MASTER] ✅ All components initialized successfully
+[MASTER] 🚀 Starting integrated trading system...
+[LIVE] 🚀 Starting live token analysis...
+[LIVE] 📡 Connecting to cluster7 goldmine feed
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] 🆕 Creating new shared connection
+[SHARED-WS] 🔧 Creating shared WebSocket instance...
+[SHARED-WS] 🍪 Using cookie-based auth (browser pattern)
+[LIVE] ✅ Connected to cluster7
+[SHARED-WS] 📋 Message queued for wss://cluster7.axiom.trade/ (state: CONNECTING)
+[LIVE] 📡 Subscribed to: new_pairs
+[SHARED-WS] 📋 Message queued for wss://cluster7.axiom.trade/ (state: CONNECTING)
+[LIVE] 📡 Subscribed to: trending-search-crypto
+[WHALE] 🚀 Starting whale data monitoring...
+[SHARED-WS] 🔌 Getting connection for: wss://eucalyptus.axiom.trade/ws
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] 🆕 Creating new shared connection
+[SHARED-WS] 🔧 Creating shared WebSocket instance...
+[SHARED-WS] 🍪 Using cookie-based auth (browser pattern)
+[WHALE] ✅ Connected to Eucalyptus whale feed
+[SHARED-WS] 📋 Message queued for wss://eucalyptus.axiom.trade/ws (state: CONNECTING)
+[WHALE] 📡 Subscribed to whale_feed room
+[WHALE] 🎯 Whale monitoring ACTIVE
+[LIVE] 🐦 Setting up Birdeye WebSocket tracking...
+[LIVE] ✅ Birdeye WebSocket tracking enabled
+[LIVE] 🔥 Degen Paper Trader: ENABLED
+[LIVE] ✅ Live token analysis ACTIVE
+[LIVE] 🎯 Monitoring for new trading opportunities...
+[SERVER] ✅ Live token analysis activated
+[MASTER] ✅ Integrated system running seamlessly!
+[MASTER] 📊 All components working together harmoniously
+[SERVER] ✅ Master Controller integration active
+[SERVER] 🚀 SEAMLESS INTEGRATION COMPLETE!
+[SERVER] 📊 All components working together harmoniously
+
+🎉 AXIOM TRADE DASHBOARD SERVER RUNNING!
+==================================================
+🌐 Dashboard URL: http://localhost:3000
+📊 API Endpoint: http://localhost:3000/api
+⚡ WebSocket: ws://localhost:3000
+==================================================
+
+🚀 Features Available:
+   • 🧠 Neural Pattern Learning
+   • 📈 Real Technical Analysis (RSI, MACD, Bollinger)
+   • 🐦 Birdeye Security Analytics
+   • 🌐 DexScreener Market Data
+   • ⚡ Real-time cluster7 Feed
+   • 🎯 Multi-source Decision Engine
+
+💡 Ready for AI-powered trading analysis!
+
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[SHARED-WS] ✅ Shared connection opened: wss://cluster7.axiom.trade/
+[SHARED-WS] 📦 Sending 2 queued messages
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[BIRDEYE-WS] ✅ Connection opened
+[BIRDEYE-WS] 📦 Unknown message type: WELCOME
+[BIRDEYE-WS]   Extracted data: { side: 'WELCOME' }
+[LIVE] 🔍 Token detected: BCB - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for BCB...
+[RESOLVER] 🎯 Processing new token: BCB (DdxDwmJaphugt7bSkB3dHtwQMokoxYJn2ax9quFvpump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-DdxDwmJaphugt7bSkB3dHtwQMokoxYJn2ax9quFvpump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:DdxDwmJaphugt7bSkB3dHtwQMokoxYJn2ax9quFvpump
+[LIVE] ✅ Token enriched: BCB - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: BCB (Queue: 1)
+[LIVE] 🎯 Token detected: BCB ($4260 liquidity)
+[SHARED-WS] ✅ Shared connection opened: wss://eucalyptus.axiom.trade/ws
+[SHARED-WS] 📦 Sending 1 queued messages
+[LIVE] ⚠️ Already running
+[SERVER] 🔗 Live token analyzer started successfully
+[LIVE] 🔬 Starting live analysis: BCB
+[LIVE] ⚡ Using fast meme analysis for BCB
+[FAST-MEME] 🚀 Starting ultra-fast analysis: BCB
+[AXIOM-API] 🔍 Starting comprehensive analysis for DdxDwmJaphugt7bSkB3dHtwQMokoxYJn2ax9quFvpump
+[AXIOM-API] ❌ Error calling /top-traders-v3 (245ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (268ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (581ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for BCB
+[FAST-MEME] 🔧 About to call calculateMemeScore for BCB
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for BCB:
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: BCB (586ms)
+[SERVER] 🎯 Broadcasting live opportunity: BCB
+[MASTER] 🎯 Opportunity: [object Object] (Total: 1)
+[LIVE] 🎯 OPPORTUNITY DETECTED: BCB
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: BCB → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing BCB: Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'BCB',
+  symbol: 'BCB',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: BCB -> NO POSITION
+[PAPER] 🔧 Evaluating position open for BCB
+[PAPER] 🔧 Position evaluation: BCB -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=1000
+[PAPER] 🔧 Buy conditions not met for BCB: action=HOLD, positionSize=0, balance=1000, sufficient=true
+[LIVE] ✅ Analysis complete: BCB → STRONG BUY (587ms)
+[ENHANCED] 🚀 Initializing Enhanced Data Processor...
+[ENHANCED] ✅ Data processor ready for token address extraction!
+✅ Enhanced listeners configured
+📊 Periodic updates started
+✅ WebSocket Data Bridge initialized with enhancements
+[SERVER] ✅ WebSocket Data Bridge connected - real-time data flowing
+[AXIOM-CONN] 🔌 Initializing enhanced WebSocket connections...
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[AXIOM-CONN] ✅ Subscribed to lighthouse
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[AXIOM-CONN] ✅ Subscribed to sol_price
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[AXIOM-CONN] ✅ Subscribed to sol-priority-fee
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[AXIOM-CONN] ✅ Subscribed to block_hash
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[AXIOM-CONN] ✅ Subscribed to twitter_feed_v2
+[AXIOM-CONN] Cluster7 enhanced with 5 new room subscriptions
+[SHARED-WS] 🔌 Getting connection for: wss://eucalyptus.axiom.trade/ws
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[AXIOM-CONN] Started ping interval for eucalyptus
+[AXIOM-CONN] ✅ Eucalyptus connection enhanced with auth
+[AXIOM-CONN] ✅ Enhanced connections established
+[SERVER] ✅ Axiom enhanced connections established
+[ENHANCED] 💵 SOL Price: $192.57
+[ENHANCED] ⛽ Priority Fee: 0.0035573925000000005 SOL
+[ENHANCED] ⛽ Priority Fee: 0.0035663082000000003 SOL
+[ENHANCED] ⛽ Priority Fee: 0.0035663082000000003 SOL
+[ENHANCED] ⛽ Priority Fee: 0.0035663082000000003 SOL
+[LIVE] 🔍 Token detected: FRIK - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for FRIK...
+[RESOLVER] 🎯 Processing new token: FRIK (Gv9bvjw1smmVG956HPdWVaboZRhScF6YgmTXcy9Wpump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[ENHANCED] ⛽ Priority Fee: 0.0035728161 SOL
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-Gv9bvjw1smmVG956HPdWVaboZRhScF6YgmTXcy9Wpump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:Gv9bvjw1smmVG956HPdWVaboZRhScF6YgmTXcy9Wpump
+[LIVE] ✅ Token enriched: FRIK - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: FRIK (Queue: 1)
+[LIVE] 🎯 Token detected: FRIK ($4260 liquidity)
+[LIVE] 🔬 Starting live analysis: FRIK
+[LIVE] ⚡ Using fast meme analysis for FRIK
+[FAST-MEME] 🚀 Starting ultra-fast analysis: FRIK
+[AXIOM-API] 🔍 Starting comprehensive analysis for Gv9bvjw1smmVG956HPdWVaboZRhScF6YgmTXcy9Wpump
+[AXIOM-API] ❌ Error calling /top-traders-v3 (200ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (216ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (230ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for FRIK
+[FAST-MEME] 🔧 About to call calculateMemeScore for FRIK
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for FRIK:
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: FRIK (230ms)
+[SERVER] 🎯 Broadcasting live opportunity: FRIK
+[MASTER] 🎯 Opportunity: [object Object] (Total: 2)
+[LIVE] 🎯 OPPORTUNITY DETECTED: FRIK
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: FRIK → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing FRIK: Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'FRIK',
+  symbol: 'FRIK',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: FRIK -> NO POSITION
+[PAPER] 🔧 Evaluating position open for FRIK
+[PAPER] 🔧 Position evaluation: FRIK -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=1000
+[PAPER] 🔧 Buy conditions not met for FRIK: action=HOLD, positionSize=0, balance=1000, sufficient=true
+[LIVE] ✅ Analysis complete: FRIK → STRONG BUY (231ms)
+[LIVE] 🔍 Token detected: AGNAM - Liquidity: $4260.121119071989
+[LIVE] 🔄 Enriching token data for AGNAM...
+[RESOLVER] 🎯 Processing new token: AGNAM (D3WLmaq3Usje1pchR6V5u9C5cAwRLXxPdTC42CDcbonk)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[ENHANCED] 💵 SOL Price: $192.475
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-D3WLmaq3Usje1pchR6V5u9C5cAwRLXxPdTC42CDcbonk
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:D3WLmaq3Usje1pchR6V5u9C5cAwRLXxPdTC42CDcbonk
+[LIVE] ✅ Token enriched: AGNAM - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: AGNAM (Queue: 1)
+[LIVE] 🎯 Token detected: AGNAM ($4260 liquidity)
+[ENHANCED] ⛽ Priority Fee: 0.0035728161 SOL
+[LIVE] 🔬 Starting live analysis: AGNAM
+[LIVE] ⚡ Using fast meme analysis for AGNAM
+[FAST-MEME] 🚀 Starting ultra-fast analysis: AGNAM
+[AXIOM-API] 🔍 Starting comprehensive analysis for D3WLmaq3Usje1pchR6V5u9C5cAwRLXxPdTC42CDcbonk
+[AXIOM-API] ❌ Error calling /pair-info (167ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /top-traders-v3 (200ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (205ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for AGNAM
+[FAST-MEME] 🔧 About to call calculateMemeScore for AGNAM
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Volume calculation: actual=0, score=0, weighted=0
+[FAST-MEME] 📊 Score calculation for AGNAM:
+  - Components total: 6.5
+  - Axiom data available: true
+  - Token liquidity: 4260.121119071989
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 7,
+  components: { momentum: 4, whale: 0, volume: 0, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: AGNAM (206ms)
+[SERVER] 🎯 Broadcasting live opportunity: AGNAM
+[MASTER] 🎯 Opportunity: [object Object] (Total: 3)
+[LIVE] 🎯 OPPORTUNITY DETECTED: AGNAM
+[LIVE] 📊 Score: 7/100, Action: RISKY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: AGNAM → RISKY (Score: 7)
+[PAPER] 📊 Processing AGNAM: Score=7, Confidence=45%, Rec=RISKY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'AGNAM',
+  symbol: 'AGNAM',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: AGNAM -> NO POSITION
+[PAPER] 🔧 Evaluating position open for AGNAM
+[PAPER] 🎯 RISKY trade triggered for AGNAM: score=7, confidence=0.45
+[PAPER] 🔧 Position evaluation: AGNAM -> action=BUY, score=7, confidence=0.45, rec=RISKY
+[PAPER] 🔧 Buy conditions check: action=BUY, positionSize=30, balance=1000
+[PAPER] 🔧 Opening position for AGNAM
+[PAPER] 📈 Position opened: AGNAM @ $30
+[PAPER] 🔧 Attempting to start Birdeye tracking for AGNAM (AGNAM)
+[BIRDEYE-WS] 📊 Now tracking: AGNAM (10/500)
+[PAPER] 🐦 Successfully started Birdeye tracking for AGNAM
+[PAPER] 🟢 BUY AGNAM: $30 (Score: 7, Confidence: 45%)
+[LIVE] 🟢 PAPER TRADE: Bought AGNAM for $30
+[LIVE] ✅ Analysis complete: AGNAM → RISKY (207ms)
+[ENHANCED] ⛽ Priority Fee: 0.0035825778000000003 SOL
+[LIVE] 🔍 Token detected:   - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for  ...
+[RESOLVER] 🎯 Processing new token:   (5v8Jk9CnYDsPaC3nGJcuH5Yei2S9Ck3f7CfMpQZ8pump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-5v8Jk9CnYDsPaC3nGJcuH5Yei2S9Ck3f7CfMpQZ8pump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:5v8Jk9CnYDsPaC3nGJcuH5Yei2S9Ck3f7CfMpQZ8pump
+[LIVE] ✅ Token enriched:   - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis:   (Queue: 1)
+[LIVE] 🎯 Token detected:   ($4260 liquidity)
+[ENHANCED] ⛽ Priority Fee: 0.003579324 SOL
+[LIVE] 🔬 Starting live analysis:  
+[LIVE] ⚡ Using fast meme analysis for  
+[FAST-MEME] 🚀 Starting ultra-fast analysis:  
+[AXIOM-API] 🔍 Starting comprehensive analysis for 5v8Jk9CnYDsPaC3nGJcuH5Yei2S9Ck3f7CfMpQZ8pump
+[AXIOM-API] ❌ Error calling /token-info (172ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (172ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[LIVE] 🔍 Token detected: BLOXCOIN - Liquidity: $4260.121119071989
+[LIVE] 🔄 Enriching token data for BLOXCOIN...
+[RESOLVER] 🎯 Processing new token: BLOXCOIN (J3oTwwHhmJCs8fHqFCeDdt7rAToLrUgoXp8hUuqKRBLX)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-J3oTwwHhmJCs8fHqFCeDdt7rAToLrUgoXp8hUuqKRBLX
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:J3oTwwHhmJCs8fHqFCeDdt7rAToLrUgoXp8hUuqKRBLX
+[LIVE] ✅ Token enriched: BLOXCOIN - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: BLOXCOIN (Queue: 1)
+[LIVE] 🎯 Token detected: BLOXCOIN ($4260 liquidity)
+[AXIOM-API] ❌ Error calling /top-traders-v3 (319ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for  
+[FAST-MEME] 🔧 About to call calculateMemeScore for  
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for  :
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete:   (322ms)
+[SERVER] 🎯 Broadcasting live opportunity:  
+[MASTER] 🎯 Opportunity: [object Object] (Total: 4)
+[LIVE] 🎯 OPPORTUNITY DETECTED:  
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result:   → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing  : Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: ' ',
+  symbol: ' ',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check:   -> NO POSITION
+[PAPER] 🔧 Evaluating position open for  
+[PAPER] 🔧 Position evaluation:   -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=970
+[PAPER] 🔧 Buy conditions not met for  : action=HOLD, positionSize=0, balance=970, sufficient=true
+[LIVE] ✅ Analysis complete:   → STRONG BUY (322ms)
+[ENHANCED] ⛽ Priority Fee: 0.0035728161 SOL
+[LIVE] 🔍 Token detected: p=mv - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for p=mv...
+[RESOLVER] 🎯 Processing new token: p=mv (8N69YsF619VoxsHe4oFoyWdvs3mcKiZfwkYZheDfpump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-8N69YsF619VoxsHe4oFoyWdvs3mcKiZfwkYZheDfpump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:8N69YsF619VoxsHe4oFoyWdvs3mcKiZfwkYZheDfpump
+[LIVE] ✅ Token enriched: p=mv - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: p=mv (Queue: 2)
+[LIVE] 🎯 Token detected: p=mv ($4260 liquidity)
+[LIVE] 🔍 Token detected: LUX - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for LUX...
+[RESOLVER] 🎯 Processing new token: LUX (2Eeb5dhkboCviNFBSWPAmzYBhYbSARp5oXk8tQy8EbgY)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-2Eeb5dhkboCviNFBSWPAmzYBhYbSARp5oXk8tQy8EbgY
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:2Eeb5dhkboCviNFBSWPAmzYBhYbSARp5oXk8tQy8EbgY
+[LIVE] ✅ Token enriched: LUX - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: LUX (Queue: 3)
+[LIVE] 🎯 Token detected: LUX ($4260 liquidity)
+[LIVE] 🔬 Starting live analysis: BLOXCOIN
+[LIVE] ⚡ Using fast meme analysis for BLOXCOIN
+[FAST-MEME] 🚀 Starting ultra-fast analysis: BLOXCOIN
+[AXIOM-API] 🔍 Starting comprehensive analysis for J3oTwwHhmJCs8fHqFCeDdt7rAToLrUgoXp8hUuqKRBLX
+[AXIOM-API] ❌ Error calling /top-traders-v3 (162ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (171ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (211ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for BLOXCOIN
+[FAST-MEME] 🔧 About to call calculateMemeScore for BLOXCOIN
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Volume calculation: actual=0, score=0, weighted=0
+[FAST-MEME] 📊 Score calculation for BLOXCOIN:
+  - Components total: 6.5
+  - Axiom data available: true
+  - Token liquidity: 4260.121119071989
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 7,
+  components: { momentum: 4, whale: 0, volume: 0, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: BLOXCOIN (212ms)
+[SERVER] 🎯 Broadcasting live opportunity: BLOXCOIN
+[MASTER] 🎯 Opportunity: [object Object] (Total: 5)
+[LIVE] 🎯 OPPORTUNITY DETECTED: BLOXCOIN
+[LIVE] 📊 Score: 7/100, Action: RISKY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: BLOXCOIN → RISKY (Score: 7)
+[PAPER] 📊 Processing BLOXCOIN: Score=7, Confidence=45%, Rec=RISKY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'BLOXCOIN',
+  symbol: 'BLOXCOIN',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: BLOXCOIN -> NO POSITION
+[PAPER] 🔧 Evaluating position open for BLOXCOIN
+[PAPER] 🎯 RISKY trade triggered for BLOXCOIN: score=7, confidence=0.45
+[PAPER] 🔧 Position evaluation: BLOXCOIN -> action=BUY, score=7, confidence=0.45, rec=RISKY
+[PAPER] 🔧 Buy conditions check: action=BUY, positionSize=30, balance=970
+[PAPER] 🔧 Opening position for BLOXCOIN
+[PAPER] 📈 Position opened: BLOXCOIN @ $30
+[PAPER] 🔧 Attempting to start Birdeye tracking for BLOXCOIN (BLOXCOIN)
+[BIRDEYE-WS] 📊 Now tracking: BLOXCOIN (10/500)
+[PAPER] 🐦 Successfully started Birdeye tracking for BLOXCOIN
+[PAPER] 🟢 BUY BLOXCOIN: $30 (Score: 7, Confidence: 45%)
+[LIVE] 🟢 PAPER TRADE: Bought BLOXCOIN for $30
+[LIVE] ✅ Analysis complete: BLOXCOIN → RISKY (212ms)
+[ENHANCED] ⛽ Priority Fee: 0.0035728161 SOL
+[LIVE] 🔬 Starting live analysis: p=mv
+[LIVE] ⚡ Using fast meme analysis for p=mv
+[FAST-MEME] 🚀 Starting ultra-fast analysis: p=mv
+[AXIOM-API] 🔍 Starting comprehensive analysis for 8N69YsF619VoxsHe4oFoyWdvs3mcKiZfwkYZheDfpump
+[AXIOM-API] ❌ Error calling /pair-info (164ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (189ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /top-traders-v3 (204ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for p=mv
+[FAST-MEME] 🔧 About to call calculateMemeScore for p=mv
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for p=mv:
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: p=mv (207ms)
+[SERVER] 🎯 Broadcasting live opportunity: p=mv
+[MASTER] 🎯 Opportunity: [object Object] (Total: 6)
+[LIVE] 🎯 OPPORTUNITY DETECTED: p=mv
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: p=mv → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing p=mv: Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'p=mv',
+  symbol: 'p=mv',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: p=mv -> NO POSITION
+[PAPER] 🔧 Evaluating position open for p=mv
+[PAPER] 🔧 Position evaluation: p=mv -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=940
+[PAPER] 🔧 Buy conditions not met for p=mv: action=HOLD, positionSize=0, balance=940, sufficient=true
+[LIVE] ✅ Analysis complete: p=mv → STRONG BUY (208ms)
+[ENHANCED] 💵 SOL Price: $192.475
+[ENHANCED] ⛽ Priority Fee: 0.0036313866 SOL
+[LIVE] 🔍 Token detected: p = mv - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for p = mv...
+[RESOLVER] 🎯 Processing new token: p = mv (62KCAzZgzdJKaRGo4Fn2r5Bmn7nCANWLkMbRtpfepump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-62KCAzZgzdJKaRGo4Fn2r5Bmn7nCANWLkMbRtpfepump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:62KCAzZgzdJKaRGo4Fn2r5Bmn7nCANWLkMbRtpfepump
+[LIVE] ✅ Token enriched: p = mv - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: p = mv (Queue: 2)
+[LIVE] 🎯 Token detected: p = mv ($4260 liquidity)
+[LIVE] 🔬 Starting live analysis: LUX
+[LIVE] ⚡ Using fast meme analysis for LUX
+[FAST-MEME] 🚀 Starting ultra-fast analysis: LUX
+[AXIOM-API] 🔍 Starting comprehensive analysis for 2Eeb5dhkboCviNFBSWPAmzYBhYbSARp5oXk8tQy8EbgY
+[AXIOM-API] ❌ Error calling /top-traders-v3 (163ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (166ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (203ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for LUX
+[FAST-MEME] 🔧 About to call calculateMemeScore for LUX
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Volume calculation: actual=0, score=0, weighted=0
+[FAST-MEME] 📊 Score calculation for LUX:
+  - Components total: 6.5
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 7,
+  components: { momentum: 4, whale: 0, volume: 0, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: LUX (204ms)
+[SERVER] 🎯 Broadcasting live opportunity: LUX
+[MASTER] 🎯 Opportunity: [object Object] (Total: 7)
+[LIVE] 🎯 OPPORTUNITY DETECTED: LUX
+[LIVE] 📊 Score: 7/100, Action: RISKY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: LUX → RISKY (Score: 7)
+[PAPER] 📊 Processing LUX: Score=7, Confidence=45%, Rec=RISKY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'LUX',
+  symbol: 'LUX',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: LUX -> NO POSITION
+[PAPER] 🔧 Evaluating position open for LUX
+[PAPER] 🎯 RISKY trade triggered for LUX: score=7, confidence=0.45
+[PAPER] 🔧 Position evaluation: LUX -> action=BUY, score=7, confidence=0.45, rec=RISKY
+[PAPER] 🔧 Buy conditions check: action=BUY, positionSize=30, balance=940
+[PAPER] 🔧 Opening position for LUX
+[PAPER] 📈 Position opened: LUX @ $30
+[PAPER] 🔧 Attempting to start Birdeye tracking for LUX (LUX)
+[BIRDEYE-WS] 📊 Now tracking: LUX (10/500)
+[PAPER] 🐦 Successfully started Birdeye tracking for LUX
+[PAPER] 🟢 BUY LUX: $30 (Score: 7, Confidence: 45%)
+[LIVE] 🟢 PAPER TRADE: Bought LUX for $30
+[LIVE] ✅ Analysis complete: LUX → RISKY (204ms)
+[ENHANCED] ⛽ Priority Fee: 0.0036313866 SOL
+[LIVE] 🔍 Token detected: HLSP - Liquidity: $4970
+[LIVE] 🔄 Enriching token data for HLSP...
+[RESOLVER] 🎯 Processing new token: HLSP (4UPcE7VY5KuVZDRCLZhcmtVJGUhLJsRfj4icTW9S6777)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-4UPcE7VY5KuVZDRCLZhcmtVJGUhLJsRfj4icTW9S6777
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:4UPcE7VY5KuVZDRCLZhcmtVJGUhLJsRfj4icTW9S6777
+[LIVE] ✅ Token enriched: HLSP - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: HLSP (Queue: 2)
+[LIVE] 🎯 Token detected: HLSP ($4970 liquidity)
+[LIVE] 🔍 Token detected: ZARD - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for ZARD...
+[RESOLVER] 🎯 Processing new token: ZARD (78iWy5Gw26mwGPdDY3YGsYEzuNx7d9GMaL2iCgMbpump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-78iWy5Gw26mwGPdDY3YGsYEzuNx7d9GMaL2iCgMbpump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:78iWy5Gw26mwGPdDY3YGsYEzuNx7d9GMaL2iCgMbpump
+[LIVE] ✅ Token enriched: ZARD - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: ZARD (Queue: 3)
+[LIVE] 🎯 Token detected: ZARD ($4260 liquidity)
+[LIVE] 🔬 Starting live analysis: p = mv
+[LIVE] ⚡ Using fast meme analysis for p = mv
+[FAST-MEME] 🚀 Starting ultra-fast analysis: p = mv
+[AXIOM-API] 🔍 Starting comprehensive analysis for 62KCAzZgzdJKaRGo4Fn2r5Bmn7nCANWLkMbRtpfepump
+[AXIOM-API] ❌ Error calling /top-traders-v3 (163ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (172ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (221ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for p = mv
+[FAST-MEME] 🔧 About to call calculateMemeScore for p = mv
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for p = mv:
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: p = mv (223ms)
+[SERVER] 🎯 Broadcasting live opportunity: p = mv
+[MASTER] 🎯 Opportunity: [object Object] (Total: 8)
+[LIVE] 🎯 OPPORTUNITY DETECTED: p = mv
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: p = mv → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing p = mv: Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'p = mv',
+  symbol: 'p = mv',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: p = mv -> NO POSITION
+[PAPER] 🔧 Evaluating position open for p = mv
+[PAPER] 🔧 Position evaluation: p = mv -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=910
+[PAPER] 🔧 Buy conditions not met for p = mv: action=HOLD, positionSize=0, balance=910, sufficient=true
+[LIVE] ✅ Analysis complete: p = mv → STRONG BUY (223ms)
+[ENHANCED] ⛽ Priority Fee: 0.0036313866 SOL
+[LIVE] 🔬 Starting live analysis: HLSP
+[LIVE] ⚡ Using fast meme analysis for HLSP
+[FAST-MEME] 🚀 Starting ultra-fast analysis: HLSP
+[AXIOM-API] 🔍 Starting comprehensive analysis for 4UPcE7VY5KuVZDRCLZhcmtVJGUhLJsRfj4icTW9S6777
+[AXIOM-API] ❌ Error calling /top-traders-v3 (160ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (163ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (188ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for HLSP
+[FAST-MEME] 🔧 About to call calculateMemeScore for HLSP
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Volume calculation: actual=0, score=0, weighted=0
+[FAST-MEME] 📊 Score calculation for HLSP:
+  - Components total: 6.5
+  - Axiom data available: true
+  - Token liquidity: 4970
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 7,
+  components: { momentum: 4, whale: 0, volume: 0, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: HLSP (189ms)
+[SERVER] 🎯 Broadcasting live opportunity: HLSP
+[MASTER] 🎯 Opportunity: [object Object] (Total: 9)
+[LIVE] 🎯 OPPORTUNITY DETECTED: HLSP
+[LIVE] 📊 Score: 7/100, Action: RISKY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: HLSP → RISKY (Score: 7)
+[PAPER] 📊 Processing HLSP: Score=7, Confidence=45%, Rec=RISKY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'HLSP',
+  symbol: 'HLSP',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: HLSP -> NO POSITION
+[PAPER] 🔧 Evaluating position open for HLSP
+[PAPER] 🎯 RISKY trade triggered for HLSP: score=7, confidence=0.45
+[PAPER] 🔧 Position evaluation: HLSP -> action=BUY, score=7, confidence=0.45, rec=RISKY
+[PAPER] 🔧 Buy conditions check: action=BUY, positionSize=30, balance=910
+[PAPER] 🔧 Opening position for HLSP
+[PAPER] 📈 Position opened: HLSP @ $30
+[PAPER] 🔧 Attempting to start Birdeye tracking for HLSP (HLSP)
+[BIRDEYE-WS] 📊 Now tracking: HLSP (10/500)
+[PAPER] 🐦 Successfully started Birdeye tracking for HLSP
+[PAPER] 🟢 BUY HLSP: $30 (Score: 7, Confidence: 45%)
+[LIVE] 🟢 PAPER TRADE: Bought HLSP for $30
+[LIVE] ✅ Analysis complete: HLSP → RISKY (190ms)
+[ENHANCED] ⛽ Priority Fee: 0.0036313866 SOL
+[LIVE] 🔬 Starting live analysis: ZARD
+[LIVE] ⚡ Using fast meme analysis for ZARD
+[FAST-MEME] 🚀 Starting ultra-fast analysis: ZARD
+[AXIOM-API] 🔍 Starting comprehensive analysis for 78iWy5Gw26mwGPdDY3YGsYEzuNx7d9GMaL2iCgMbpump
+[AXIOM-API] ❌ Error calling /pair-info (163ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (176ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /top-traders-v3 (209ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for ZARD
+[FAST-MEME] 🔧 About to call calculateMemeScore for ZARD
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for ZARD:
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: ZARD (212ms)
+[SERVER] 🎯 Broadcasting live opportunity: ZARD
+[MASTER] 🎯 Opportunity: [object Object] (Total: 10)
+[LIVE] 🎯 OPPORTUNITY DETECTED: ZARD
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: ZARD → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing ZARD: Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'ZARD',
+  symbol: 'ZARD',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: ZARD -> NO POSITION
+[PAPER] 🔧 Evaluating position open for ZARD
+[PAPER] 🔧 Position evaluation: ZARD -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=880
+[PAPER] 🔧 Buy conditions not met for ZARD: action=HOLD, positionSize=0, balance=880, sufficient=true
+[LIVE] ✅ Analysis complete: ZARD → STRONG BUY (213ms)
+[ENHANCED] ⛽ Priority Fee: 0.0036313866 SOL
+[LIVE] 🔍 Token detected: WifBooty. - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for WifBooty....
+[RESOLVER] 🎯 Processing new token: WifBooty. (81auUgEZyt1fGZQ4x9Q5EtRfcWHL3pUvjYkG9kZfpump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-81auUgEZyt1fGZQ4x9Q5EtRfcWHL3pUvjYkG9kZfpump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:81auUgEZyt1fGZQ4x9Q5EtRfcWHL3pUvjYkG9kZfpump
+[LIVE] ✅ Token enriched: WifBooty. - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: WifBooty. (Queue: 1)
+[LIVE] 🎯 Token detected: WifBooty. ($4260 liquidity)
+[LIVE] 🔬 Starting live analysis: WifBooty.
+[LIVE] ⚡ Using fast meme analysis for WifBooty.
+[FAST-MEME] 🚀 Starting ultra-fast analysis: WifBooty.
+[AXIOM-API] 🔍 Starting comprehensive analysis for 81auUgEZyt1fGZQ4x9Q5EtRfcWHL3pUvjYkG9kZfpump
+[LIVE] 🔍 Token detected: nig  - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for nig ...
+[RESOLVER] 🎯 Processing new token: nig  (8ArND2bJTb6pCLid4MCH85VZjEwQZFzroocUw3v5pump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-8ArND2bJTb6pCLid4MCH85VZjEwQZFzroocUw3v5pump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:8ArND2bJTb6pCLid4MCH85VZjEwQZFzroocUw3v5pump
+[LIVE] ✅ Token enriched: nig  - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: nig  (Queue: 1)
+[LIVE] 🎯 Token detected: nig  ($4260 liquidity)
+[AXIOM-API] ❌ Error calling /token-info (163ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /top-traders-v3 (162ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (182ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for WifBooty.
+[FAST-MEME] 🔧 About to call calculateMemeScore for WifBooty.
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for WifBooty.:
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: WifBooty. (184ms)
+[SERVER] 🎯 Broadcasting live opportunity: WifBooty.
+[MASTER] 🎯 Opportunity: [object Object] (Total: 11)
+[LIVE] 🎯 OPPORTUNITY DETECTED: WifBooty.
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: WifBooty. → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing WifBooty.: Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'WifBooty.',
+  symbol: 'WifBooty.',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: WifBooty. -> NO POSITION
+[PAPER] 🔧 Evaluating position open for WifBooty.
+[PAPER] 🔧 Position evaluation: WifBooty. -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=880
+[PAPER] 🔧 Buy conditions not met for WifBooty.: action=HOLD, positionSize=0, balance=880, sufficient=true
+[LIVE] ✅ Analysis complete: WifBooty. → STRONG BUY (184ms)
+[ENHANCED] ⛽ Priority Fee: 0.0036313866 SOL
+[ENHANCED] 💵 SOL Price: $192.46
+[LIVE] 🔬 Starting live analysis: nig 
+[LIVE] ⚡ Using fast meme analysis for nig 
+[FAST-MEME] 🚀 Starting ultra-fast analysis: nig 
+[AXIOM-API] 🔍 Starting comprehensive analysis for 8ArND2bJTb6pCLid4MCH85VZjEwQZFzroocUw3v5pump
+[AXIOM-API] ❌ Error calling /pair-info (162ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /top-traders-v3 (162ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /token-info (169ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for nig 
+[FAST-MEME] 🔧 About to call calculateMemeScore for nig 
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for nig :
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: nig  (170ms)
+[SERVER] 🎯 Broadcasting live opportunity: nig 
+[MASTER] 🎯 Opportunity: [object Object] (Total: 12)
+[LIVE] 🎯 OPPORTUNITY DETECTED: nig 
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: nig  → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing nig : Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'nig ',
+  symbol: 'nig ',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: nig  -> NO POSITION
+[PAPER] 🔧 Evaluating position open for nig 
+[PAPER] 🔧 Position evaluation: nig  -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=880
+[PAPER] 🔧 Buy conditions not met for nig : action=HOLD, positionSize=0, balance=880, sufficient=true
+[LIVE] ✅ Analysis complete: nig  → STRONG BUY (171ms)
+[ENHANCED] ⛽ Priority Fee: 0.0039999999000000005 SOL
+[ENHANCED] ⛽ Priority Fee: 0.0039999999000000005 SOL
+[ENHANCED] ⛽ Priority Fee: 0.0039999999000000005 SOL
+[LIVE] 🔍 Token detected: MIM - Liquidity: $4260
+[LIVE] 🔄 Enriching token data for MIM...
+[RESOLVER] 🎯 Processing new token: MIM (6YUHfXD7erckgP1r3NvZw2kR8QxqQoxT8f1xjq6Epump)
+[RESOLVER] ❌ Error fetching token data: Cannot read properties of undefined (reading 'get')
+[SHARED-WS] 🔌 Getting connection for: wss://cluster7.axiom.trade/
+[SHARED-WS] 🔄 Share enabled: true
+[SHARED-WS] ♻️  Reusing existing shared connection
+[SHARED-WS] 📊 Current state: OPEN
+[LIVE] 📨 Processing new_pairs message
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📊 Subscribed to buy/sell updates: b-6YUHfXD7erckgP1r3NvZw2kR8QxqQoxT8f1xjq6Epump
+[SHARED-WS] 📤 Message sent to wss://cluster7.axiom.trade/
+[LIVE] 📈 Subscribed to trade updates: t:6YUHfXD7erckgP1r3NvZw2kR8QxqQoxT8f1xjq6Epump
+[LIVE] ✅ Token enriched: MIM - LP Burned: undefined%, Top10: undefined%
+[FAST-MEME] ✅ Quick filter passed (0ms)
+[LIVE] 📋 Queued for analysis: MIM (Queue: 1)
+[LIVE] 🎯 Token detected: MIM ($4260 liquidity)
+[LIVE] 🔬 Starting live analysis: MIM
+[LIVE] ⚡ Using fast meme analysis for MIM
+[FAST-MEME] 🚀 Starting ultra-fast analysis: MIM
+[AXIOM-API] 🔍 Starting comprehensive analysis for 6YUHfXD7erckgP1r3NvZw2kR8QxqQoxT8f1xjq6Epump
+[AXIOM-API] ❌ Error calling /token-info (175ms): Request failed with status code 500
+[AXIOM-API] Failed to get token info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /pair-info (178ms): Request failed with status code 500
+[AXIOM-API] Failed to get pair info: Request failed with status code 500
+[AXIOM-API] ❌ Error calling /top-traders-v3 (183ms): Request failed with status code 500
+[AXIOM-API] Failed to get top traders: Request failed with status code 500
+[FAST-MEME] ✅ Axiom API data received for MIM
+[FAST-MEME] 🔧 About to call calculateMemeScore for MIM
+[FAST-MEME] 🔧 Input data: {
+  momentum: 'present',
+  whaleActivity: 'present',
+  tokenData: 'present',
+  axiomData: 'present',
+  cluster7Data: 'missing'
+}
+[FAST-MEME] 🔧 Estimated volume from liquidity for pump token: 8520
+[FAST-MEME] 🔧 Volume calculation: actual=8520, score=85.2, weighted=25.56
+[FAST-MEME] 📊 Score calculation for MIM:
+  - Components total: 32.06
+  - Axiom data available: true
+  - Token liquidity: 4260
+  - Token volume: N/A
+  - Token data keys: address, symbol, pairAddress, liquidity, volume, priceHistory, volumeHistory, buyVolume, sellVolume, age, birdeyeScore, birdeyeType, realtimePrice, realtimePriceChange, realtimeVolume
+  - Volume from different fields: {
+  volume: 0,
+  volume24h: undefined,
+  realtimeVolume: undefined,
+  volumeUsd: undefined,
+  buyVolume: 0,
+  sellVolume: 0
+}
+[FAST-MEME] 🔧 calculateMemeScore returned: {
+  total: 32,
+  components: { momentum: 4, whale: 0, volume: 25.56, community: 0, safety: 2.5 }
+}
+[FAST-MEME] ✅ Analysis complete: MIM (185ms)
+[SERVER] 🎯 Broadcasting live opportunity: MIM
+[MASTER] 🎯 Opportunity: [object Object] (Total: 13)
+[LIVE] 🎯 OPPORTUNITY DETECTED: MIM
+[LIVE] 📊 Score: 32/100, Action: STRONG BUY
+[LIVE] 💰 Position: 0.01, Confidence: 45%
+[LIVE] 📊 Analysis result: MIM → STRONG BUY (Score: 32)
+[PAPER] 📊 Processing MIM: Score=32, Confidence=45%, Rec=STRONG BUY
+[PAPER] 🔧 Debug analysis object: {
+  token: 'MIM',
+  symbol: 'MIM',
+  hasScores: true,
+  hasRecommendation: true,
+  keys: [
+    'token',
+    'symbol',
+    'timestamp',
+    'analysisTime',
+    'scores',
+    'recommendation',
+    'confidence',
+    'dexScreener',
+    'risks'
+  ]
+}
+[PAPER] 🔧 Existing position check: MIM -> NO POSITION
+[PAPER] 🔧 Evaluating position open for MIM
+[PAPER] 🔧 Position evaluation: MIM -> action=HOLD, score=32, confidence=0.45, rec=STRONG BUY
+[PAPER] 🔧 Buy conditions check: action=HOLD, positionSize=0, balance=880
+[PAPER] 🔧 Buy conditions not met for MIM: action=HOLD, positionSize=0, balance=880, sufficient=true
+[LIVE] ✅ Analysis complete: MIM → STRONG BUY (186ms)
+[ENHANCED] ⛽ Priority Fee: 0.0039999999000000005 SOL
+[ENHANCED] ⛽ Priority Fee: 0.0039999999000000005 SOL
+[ENHANCED] 💵 SOL Price: $192.46
+[ENHANCED] ⛽ Priority Fee: 0.004139156400000001 SOL

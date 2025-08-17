@@ -1,0 +1,179 @@
+# AXIOM TRADING SYSTEM - STRUCTURED SCHEMA
+# Machine-readable companion to AXIOM_TRADING_SYSTEM_KNOWLEDGE_BASE.md
+
+system:
+  name: "Axiom Trading System"
+  version: "2.1.0"
+  status: "operational"
+  last_verified: "2025-08-16"
+  location: "/Users/DjEthixx/Desktop/Dev"
+  startup_command: "source axiom_tokens.env && node gui/server.js"
+  dashboard_url: "http://localhost:3000"
+
+components:
+  core_services:
+    - name: "LiveTokenAnalyzer"
+      file: "services/LiveTokenAnalyzer.js"
+      function: "Main analysis pipeline"
+      status: "active"
+    - name: "EnhancedExternalAnalysis" 
+      file: "services/EnhancedExternalAnalysis.js"
+      function: "Multi-AI orchestration"
+      status: "active"
+    - name: "SharedWebSocketManager"
+      file: "services/SharedWebSocketManager.js"  
+      function: "Persistent connections"
+      status: "active"
+      connection_time: "43+ minutes"
+    - name: "BirdeyeAnalytics"
+      file: "services/BirdeyeAnalytics.js"
+      function: "Security analysis"
+      status: "active"
+    - name: "WhaleDataService"
+      file: "services/WhaleDataService.js"
+      function: "Whale tracking"
+      status: "active"
+      whale_count: 29
+
+data_sources:
+  - name: "cluster7"
+    url: "wss://cluster7.axiom.trade/"
+    function: "New token launches"
+    rate: "~0.3 messages/second"
+    status: "connected"
+  - name: "eucalyptus"
+    url: "wss://eucalyptus.axiom.trade/ws"
+    function: "Whale transactions"
+    status: "connected"
+  - name: "birdeye"
+    function: "Security & market data"
+    api_key_configured: true
+    rate_limit_free: "50 req/min"
+    rate_limit_premium: "1000 req/min"
+  - name: "dexscreener"
+    function: "Market data"
+    tier: "free"
+    status: "operational"
+
+trading_strategies:
+  fast_meme:
+    name: "Fast Meme Trading"
+    analysis_time: "<2 seconds"
+    position_size: "$10-50"
+    optimization: "speed over accuracy"
+    files: ["FastMemeAnalyzer.js", "MomentumTracker.js"]
+  
+  whale_copy:
+    name: "Whale Copy Trading" 
+    method: "Mirror whale transactions"
+    delay: "1-2 seconds"
+    position_size: "$25-200"
+    whale_count: 29
+    
+  premium_plus:
+    name: "Premium Plus Strategy"
+    profit_target: "$200-500/day"
+    win_rate: "60-80%"
+    requirements: ["Birdeye Premium Plus API"]
+    position_size: "$100-200"
+    
+  neural_ai:
+    name: "Neural AI Strategy"
+    model: "TensorFlow.js"
+    architecture: "20→64→32→16→3"
+    predictions: ["DUD", "MODERATE", "WINNER"]
+    learning: "continuous"
+
+ai_analysis:
+  neural_network:
+    inputs: 20
+    hidden_layers: [64, 32, 16]
+    outputs: 3
+    features: ["price_patterns", "volume", "liquidity", "social_signals", "security_metrics"]
+    
+  technical_indicators:
+    - "RSI (14-period)"
+    - "MACD"
+    - "Bollinger Bands"
+    - "Stochastic"
+    - "ADX"
+    - "OBV"
+    
+  scoring_weights:
+    neural: 0.20
+    technical: 0.20
+    security: 0.25
+    market: 0.15
+    fundamental: 0.20
+
+position_sizing:
+  current_balance: 421.875
+  currency: "USD"
+  rules:
+    strong_buy:
+      confidence_threshold: "90%+"
+      position_size: "$25-50"
+      wallet_percentage: "6-12%"
+    buy:
+      confidence_threshold: "70%+"
+      position_size: "$10-25"
+      wallet_percentage: "2-6%"
+    watch:
+      confidence_threshold: "50%+"
+      position_size: "$5-15"
+      wallet_percentage: "1-4%"
+    avoid:
+      confidence_threshold: "<50%"
+      position_size: "$0"
+      
+risk_management:
+  max_position_size: "$50"
+  max_concurrent_positions: "3-5"
+  stop_loss: "-20%"
+  security_threshold: 60
+  reserve_capital: "$50-100"
+
+performance_metrics:
+  cluster7_processing: "~0.3 msg/sec"
+  analysis_time: "2-15 seconds"
+  connection_stability: "43+ minutes"
+  memory_usage: "<500MB"
+  concurrent_analyses: "3-5"
+  cache_duration: "5 minutes"
+
+api_configuration:
+  environment_files:
+    - ".env.dev"
+    - "axiom_tokens.env"
+  
+  keys:
+    birdeye_api_key: "f31ad137262d4a57bbb85e0b35a75208"
+    axiom_access_token: "auto-refreshed"
+    axiom_refresh_token: "400 days"
+    
+  endpoints:
+    health: "/api/health"
+    live_stats: "/api/live-stats" 
+    opportunities: "/api/opportunities"
+    history: "/api/history"
+    control: "/api/live-control"
+
+troubleshooting:
+  common_issues:
+    - issue: "System not starting"
+      solution: "pkill -f 'node gui/server.js' && source axiom_tokens.env && node gui/server.js"
+    - issue: "No opportunities detected"
+      cause: "Quality filtering ($5k+ liquidity)"
+      check: "cluster7 connection = OPEN"
+    - issue: "Dashboard not loading"
+      solutions: ["Check port 3000", "Clear browser cache", "Restart server"]
+    - issue: "API rate limits"
+      solution: "Upgrade to Birdeye Premium Plus"
+
+documentation_status:
+  total_source_files: 37
+  outdated_files: ["README.md", "HANDOFF_GUIDE.md", "SYSTEM_STATUS_REPORT.md", "QUICK_REFERENCE.md", "EMERGENCY_FIX_CHECKLIST.md"]
+  outdated_date: "2025-08-15"
+  current_files: ["BREAKTHROUGH_SUMMARY.md", "SYSTEM_STATUS_SUMMARY.md", "HANDOFF_GUIDE_NEW_TAB.md", "LIVE_SYSTEM_GUIDE.md"]
+  current_date: "2025-08-14"
+  consolidated_kb: "AXIOM_TRADING_SYSTEM_KNOWLEDGE_BASE.md" 

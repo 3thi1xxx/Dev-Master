@@ -1,0 +1,738 @@
+{
+  "trackedTokens": [
+    [
+      "FsGqJiPogBVhGGCf1Wq3dDjLG1R2YPMozbnib4GPznog",
+      {
+        "address": "FsGqJiPogBVhGGCf1Wq3dDjLG1R2YPMozbnib4GPznog",
+        "symbol": "Marble",
+        "createdAt": 1755165405561,
+        "initialLiquidity": 9771.945503318,
+        "initialMarketCap": 28196.712354792584,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405561,
+            "value": 9771.945503318
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 6,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "45FffdEVGaik9mraDpFkhnLbfghTSVwQJx3mnLXHV5hk",
+      {
+        "address": "45FffdEVGaik9mraDpFkhnLbfghTSVwQJx3mnLXHV5hk",
+        "symbol": "STUPID",
+        "createdAt": 1755165405561,
+        "initialLiquidity": 95097.56188979799,
+        "initialMarketCap": 2982040.1047520153,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405561,
+            "value": 95097.56188979799
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 6,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "FqXCyB66TYSiHSsxkQkiXbKo2Vwdsw6iFKpqM1dWyF1a",
+      {
+        "address": "FqXCyB66TYSiHSsxkQkiXbKo2Vwdsw6iFKpqM1dWyF1a",
+        "symbol": "xp",
+        "createdAt": 1755165405568,
+        "initialLiquidity": 31326.084945136,
+        "initialMarketCap": 354691.75970954815,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405568,
+            "value": 31326.084945136
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 2,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "CsGNB4XzdjcZ7zC5fpnieJHB8rfVbkE2LPAbsYkqv8yY",
+      {
+        "address": "CsGNB4XzdjcZ7zC5fpnieJHB8rfVbkE2LPAbsYkqv8yY",
+        "symbol": "WHYNOT",
+        "createdAt": 1755165405563,
+        "initialLiquidity": 8880.27109893,
+        "initialMarketCap": 18897.04294748246,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405563,
+            "value": 8880.27109893
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 6,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "2ysGYKvEH2yxEod8wcqcBFNBp7zisCs5BysYDtSwvzLF",
+      {
+        "address": "2ysGYKvEH2yxEod8wcqcBFNBp7zisCs5BysYDtSwvzLF",
+        "symbol": "FIRE",
+        "createdAt": 1755165405567,
+        "initialLiquidity": 10034.314611652,
+        "initialMarketCap": 27613.11011143512,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405567,
+            "value": 10034.314611652
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 4,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "CnPZKvmdpC99Cma72Qo4VMeYLbCjgBZvC6Bj7Y6aPqKn",
+      {
+        "address": "CnPZKvmdpC99Cma72Qo4VMeYLbCjgBZvC6Bj7Y6aPqKn",
+        "symbol": "C.R.E.A.M.",
+        "createdAt": 1755165405564,
+        "initialLiquidity": 8153.9428492219995,
+        "initialMarketCap": 18074.415080100134,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405564,
+            "value": 8153.9428492219995
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 10,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "2h6YyKRETXrWkhBvbwjZAfQ2zgproiwkBdZ2AVDWziA6",
+      {
+        "address": "2h6YyKRETXrWkhBvbwjZAfQ2zgproiwkBdZ2AVDWziA6",
+        "symbol": "OVL",
+        "createdAt": 1755165405565,
+        "initialLiquidity": 9477.794166138,
+        "initialMarketCap": 20316.62674574782,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405565,
+            "value": 9477.794166138
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 3,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "DdJsHzh4JhqGHMXF86772GgjC3nG3wYZKsz1JdhU9ibd",
+      {
+        "address": "DdJsHzh4JhqGHMXF86772GgjC3nG3wYZKsz1JdhU9ibd",
+        "symbol": "CALUM",
+        "createdAt": 1755165405565,
+        "initialLiquidity": 15350.434439728,
+        "initialMarketCap": 70436.89450439166,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405565,
+            "value": 15350.434439728
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 5,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "4F13bWhNZKASiwMsGrKi8JJEfhcTaxb19qQuGo7pXRr2",
+      {
+        "address": "4F13bWhNZKASiwMsGrKi8JJEfhcTaxb19qQuGo7pXRr2",
+        "symbol": "ORANGE",
+        "createdAt": 1755165405566,
+        "initialLiquidity": 119538.93528322001,
+        "initialMarketCap": 2668097.0053600185,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405566,
+            "value": 119538.93528322001
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 6,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "2dG3mevCgVP7BAkpf2vdtAYnCZo88WpHM8HUpMceFAZR",
+      {
+        "address": "2dG3mevCgVP7BAkpf2vdtAYnCZo88WpHM8HUpMceFAZR",
+        "symbol": "fourx",
+        "createdAt": 1755165405580,
+        "initialLiquidity": 8044.731361352,
+        "initialMarketCap": 14889.161857092626,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405580,
+            "value": 8044.731361352
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 5,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "GfXvXyrXn2jZQHKRsJk3HdCUvbcnjAiV8v1fGe1AQa5o",
+      {
+        "address": "GfXvXyrXn2jZQHKRsJk3HdCUvbcnjAiV8v1fGe1AQa5o",
+        "symbol": "PYR",
+        "createdAt": 1755165405569,
+        "initialLiquidity": 8210.023267346001,
+        "initialMarketCap": 27897.057223247593,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405569,
+            "value": 8210.023267346001
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 3,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "3vu9QTWWxEDNmoqRNEfb9Cvke2xBDJcJ1bdL8coYQSF1",
+      {
+        "address": "3vu9QTWWxEDNmoqRNEfb9Cvke2xBDJcJ1bdL8coYQSF1",
+        "symbol": "fatgirls",
+        "createdAt": 1755165405570,
+        "initialLiquidity": 8965.384769604,
+        "initialMarketCap": 24652.010000508748,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405570,
+            "value": 8965.384769604
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 8,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "E9oGC72mZWYqmzR5ggB9DAoGyRssR3uhFWHG1L75RZve",
+      {
+        "address": "E9oGC72mZWYqmzR5ggB9DAoGyRssR3uhFWHG1L75RZve",
+        "symbol": "67",
+        "createdAt": 1755165405570,
+        "initialLiquidity": 111796.10550488,
+        "initialMarketCap": 2922178.6057146904,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405570,
+            "value": 111796.10550488
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 2,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "62kPzc5mxCPkH86WcM9LLz2w7SfpyAnmFTDAXonrAZsx",
+      {
+        "address": "62kPzc5mxCPkH86WcM9LLz2w7SfpyAnmFTDAXonrAZsx",
+        "symbol": "Boge",
+        "createdAt": 1755165405571,
+        "initialLiquidity": 9552.933409054,
+        "initialMarketCap": 28905.37980531632,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405571,
+            "value": 9552.933409054
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 4,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "4ZoYLDEzAYytCr6hBpeZn3J3hPHAXo8mV47s55uzjTvR",
+      {
+        "address": "4ZoYLDEzAYytCr6hBpeZn3J3hPHAXo8mV47s55uzjTvR",
+        "symbol": "KWAUDE",
+        "createdAt": 1755165405572,
+        "initialLiquidity": 56142.375593820005,
+        "initialMarketCap": 930816.0529543611,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405572,
+            "value": 56142.375593820005
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 6,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "9hWF4Y8NeWUxohsN79ru5f9KugfrBUqnQK1cfPqsp7h5",
+      {
+        "address": "9hWF4Y8NeWUxohsN79ru5f9KugfrBUqnQK1cfPqsp7h5",
+        "symbol": "草泥马",
+        "createdAt": 1755165405572,
+        "initialLiquidity": 12221.3945354,
+        "initialMarketCap": 34481.24372121033,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405572,
+            "value": 12221.3945354
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 3,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "HXiattkaXQCPYqaBasAQuNJJv9yzDDjqdov4jPEGRzfb",
+      {
+        "address": "HXiattkaXQCPYqaBasAQuNJJv9yzDDjqdov4jPEGRzfb",
+        "symbol": "POOCOIN",
+        "createdAt": 1755165405573,
+        "initialLiquidity": 11271.762816244,
+        "initialMarketCap": 41813.34021070219,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405573,
+            "value": 11271.762816244
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 7,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "AxjUNgVL1s46ZZb968rdHz2TBvNggGGHVpVF9TnZG9YJ",
+      {
+        "address": "AxjUNgVL1s46ZZb968rdHz2TBvNggGGHVpVF9TnZG9YJ",
+        "symbol": "KAKA",
+        "createdAt": 1755165405574,
+        "initialLiquidity": 96364.308206476,
+        "initialMarketCap": 1334360.8862180104,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405574,
+            "value": 96364.308206476
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 4,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "Awc3R2FWgmTCx5x6fsWCrThWn6xpLmvz4ZE9dsjKDF51",
+      {
+        "address": "Awc3R2FWgmTCx5x6fsWCrThWn6xpLmvz4ZE9dsjKDF51",
+        "symbol": "AAA",
+        "createdAt": 1755165405574,
+        "initialLiquidity": 8636.896531987999,
+        "initialMarketCap": 15589.345911772554,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405574,
+            "value": 8636.896531987999
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 3,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "29Jpw7mteYvXth9aWfd1Ts1bX8SQ1nCJsJz9HTZqfttA",
+      {
+        "address": "29Jpw7mteYvXth9aWfd1Ts1bX8SQ1nCJsJz9HTZqfttA",
+        "symbol": "Azathoth",
+        "createdAt": 1755165405575,
+        "initialLiquidity": 9131.029773082,
+        "initialMarketCap": 40704.72722153822,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405575,
+            "value": 9131.029773082
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 8,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "4JHM7yyi99zWh3XjUYTdk8XDs5SWw78bxnr4MeYJXARW",
+      {
+        "address": "4JHM7yyi99zWh3XjUYTdk8XDs5SWw78bxnr4MeYJXARW",
+        "symbol": "BROWNHOUSE",
+        "createdAt": 1755165405579,
+        "initialLiquidity": 89580.701703148,
+        "initialMarketCap": 2259004.005045616,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405579,
+            "value": 89580.701703148
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 10,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "68QrFCw6RdSgqqauBw9k12whHgbESYM7oFTzYjDUSfrA",
+      {
+        "address": "68QrFCw6RdSgqqauBw9k12whHgbESYM7oFTzYjDUSfrA",
+        "symbol": "turn",
+        "createdAt": 1755165405577,
+        "initialLiquidity": 27070.354336022,
+        "initialMarketCap": 326217.067978972,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405577,
+            "value": 27070.354336022
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 4,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "9asrXbJ1tcw9mDKw3kvWm8BSbiPzRyWFvZ9dgZBpuZ9y",
+      {
+        "address": "9asrXbJ1tcw9mDKw3kvWm8BSbiPzRyWFvZ9dgZBpuZ9y",
+        "symbol": "Ravi",
+        "createdAt": 1755165405577,
+        "initialLiquidity": 8582.478431325999,
+        "initialMarketCap": 39375.70390150035,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405577,
+            "value": 8582.478431325999
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 4,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "4JN1rdLVmLJQtrZzuTnKp1qd4ucerGkibeRxN6aMrtjD",
+      {
+        "address": "4JN1rdLVmLJQtrZzuTnKp1qd4ucerGkibeRxN6aMrtjD",
+        "symbol": "TRASH",
+        "createdAt": 1755165405578,
+        "initialLiquidity": 10882.4475461,
+        "initialMarketCap": 34950.641389578224,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405578,
+            "value": 10882.4475461
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 5,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "8GEDGedu3kTUcg5KETkpLJLiNmVBA2ff4Wo7Zb4C5PLi",
+      {
+        "address": "8GEDGedu3kTUcg5KETkpLJLiNmVBA2ff4Wo7Zb4C5PLi",
+        "symbol": "FARTLESS",
+        "createdAt": 1755165405578,
+        "initialLiquidity": 10068.463919295998,
+        "initialMarketCap": 44091.96830759614,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405578,
+            "value": 10068.463919295998
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 8,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ],
+    [
+      "34LbTC7RtWiX3dPKWrhEJBcihvs8cgFFtqGAAu3Ewn3V",
+      {
+        "address": "34LbTC7RtWiX3dPKWrhEJBcihvs8cgFFtqGAAu3Ewn3V",
+        "symbol": "DOGECOIN",
+        "createdAt": 1755165405581,
+        "initialLiquidity": 17406.941877944002,
+        "initialMarketCap": 112724.3093129924,
+        "confidence": 0.7,
+        "source": "SURGE_OPPORTUNITY",
+        "priceHistory": [],
+        "volumeHistory": [],
+        "liquidityHistory": [
+          {
+            "time": 1755165405581,
+            "value": 17406.941877944002
+          }
+        ],
+        "outcome": "unknown",
+        "maxPrice": null,
+        "finalPrice": null,
+        "roi": null,
+        "nameLength": 8,
+        "hasEmoji": false,
+        "launchHour": 21,
+        "launchDay": 4
+      }
+    ]
+  ],
+  "patterns": {
+    "winners": [],
+    "duds": [],
+    "unknown": []
+  },
+  "lastUpdated": 1755165405581
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "taskId": "T1.10",
+    "proofPath": "proof/screenshots/step-T1.10.png",
+    "timestamp": "2025-07-20T12:04:33Z"
+  },
+  {
+    "taskId": "T1.11",
+    "proofPath": "proof/snapshot-2025-07-21T09-35-54.zip",
+    "timestamp": "2025-07-21T09:35:55Z"
+  },
+  {
+    "taskId": "T1.99",
+    "proofPath": "proof/memory-offload-confirmed.md",
+    "timestamp": "2025-07-21T08:07:08Z"
+  },
+  {
+    "taskId": "T2.2",
+    "proofPath": "proof/PMACChainBuilder-output.json",
+    "timestamp": "2025-07-21T21:04:00Z"
+  }
+]

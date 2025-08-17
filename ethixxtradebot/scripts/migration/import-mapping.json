@@ -1,0 +1,9 @@
+{
+  "../services/IntelligentWhaleDiscovery": "../core/IntelligenceEngine",
+  "../services/LiveTokenAnalyzer": "../core/IntelligenceEngine",
+  "../services/SharedWebSocketManager": "../core/DataManager",
+  "../trading/TradingStrategies": "../core/StrategyEngine",
+  "../risk/RiskAssessment": "../core/RiskManager",
+  "../execution/TradeExecutor": "../core/ExecutionManager",
+  "../monitoring/PerformanceTracker": "../core/SystemMonitor"
+}

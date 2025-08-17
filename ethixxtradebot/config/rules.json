@@ -1,0 +1,25 @@
+{
+  "filters": {
+    "stages": ["final-stretch", "migrated"],
+    "maxMarketCap": 500000,
+    "minMarketCap": 5000,
+    "maxInsidersPercent": 20,
+    "maxBundlersPercent": 25,
+    "maxAgeMinutes": 30
+  },
+  "scoring": {
+    "finalStretchBonus": 0.2,
+    "migratedBonus": 0.1,
+    "lowInsidersBonus": 0.15,
+    "lowBundlersBonus": 0.1
+  },
+  "execution": {
+    "minScore": 0.6,
+    "defaultAmountSol": 0.1,
+    "presets": {
+      "small": { "amountSol": 0.05 },
+      "medium": { "amountSol": 0.1 },
+      "large": { "amountSol": 0.2 }
+    }
+  }
+} 

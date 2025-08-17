@@ -1,0 +1,93 @@
+{
+  "strategy_name": "Conservative Growth",
+  "target_portfolio": 100.0,
+  "risk_profile": "low_to_medium",
+  
+  "phases": {
+    "phase_1_proof": {
+      "description": "Proof of concept with tiny trades",
+      "portfolio_range": [100, 120],
+      "trade_size_sol": 0.01,
+      "trade_size_usd": 2.5,
+      "max_trades_per_hour": 6,
+      "profit_target_percent": 8,
+      "stop_loss_percent": 4,
+      "filters": {
+        "min_market_cap": 50000,
+        "max_market_cap": 200000,
+        "min_score": 0.8,
+        "required_stages": ["final-stretch"],
+        "max_insider_percent": 15
+      }
+    },
+    
+    "phase_2_scaled": {
+      "description": "Scaled operations with proven patterns",
+      "portfolio_range": [120, 150],
+      "trade_size_sol": 0.02,
+      "trade_size_usd": 5.0,
+      "max_trades_per_hour": 4,
+      "profit_target_percent": 10,
+      "stop_loss_percent": 5,
+      "filters": {
+        "min_market_cap": 75000,
+        "max_market_cap": 300000,
+        "min_score": 0.85,
+        "required_stages": ["final-stretch", "migrated"],
+        "max_insider_percent": 12
+      }
+    },
+    
+    "phase_3_optimized": {
+      "description": "Full automation with refined rules",
+      "portfolio_range": [150, 250],
+      "trade_size_sol": 0.04,
+      "trade_size_usd": 10.0,
+      "max_trades_per_hour": 3,
+      "profit_target_percent": 12,
+      "stop_loss_percent": 6,
+      "filters": {
+        "min_market_cap": 100000,
+        "max_market_cap": 500000,
+        "min_score": 0.9,
+        "required_stages": ["migrated"],
+        "max_insider_percent": 10
+      }
+    }
+  },
+  
+  "risk_management": {
+    "max_daily_loss_percent": 5,
+    "max_concurrent_positions": 3,
+    "force_stop_loss_hours": 2,
+    "portfolio_rebalance_threshold": 0.1,
+    "emergency_stop_conditions": [
+      "total_loss_exceeds_10_percent",
+      "consecutive_losses_exceed_5",
+      "api_errors_exceed_3_per_hour"
+    ]
+  },
+  
+  "timing_strategy": {
+    "preferred_hours_utc": [13, 14, 15, 16, 17, 18, 19, 20],
+    "avoid_hours_utc": [0, 1, 2, 3, 4, 5, 6],
+    "weekend_trading": false,
+    "high_volatility_pause": true
+  },
+  
+  "profit_taking": {
+    "quick_profit_percent": 5,
+    "target_profit_percent": 10,
+    "moon_profit_percent": 25,
+    "trailing_stop_activation": 15,
+    "partial_profit_levels": [8, 15, 25]
+  },
+  
+  "token_selection_priorities": [
+    "low_insider_percentage",
+    "high_volume_spike", 
+    "recent_migration_completion",
+    "trending_momentum",
+    "technical_breakout_patterns"
+  ]
+} 

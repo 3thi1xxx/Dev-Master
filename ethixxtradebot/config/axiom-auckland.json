@@ -1,0 +1,54 @@
+{
+  "description": "Auckland-optimized Axiom configuration for New Zealand users",
+  "region": "OCEANIA",
+  "location": "Auckland, NZ",
+  "optimizedFor": "sub-50ms latency",
+  
+  "primaryEndpoints": {
+    "whaleTracking": {
+      "url": "wss://eucalyptus.axiom.trade/ws",
+      "latency": "~10ms",
+      "region": "Auckland Edge (Cloudflare)",
+      "purpose": "Real-time whale transaction monitoring",
+      "authentication": "JWT tokens required"
+    },
+    "tradingCluster": {
+      "url": "wss://cluster7.axiom.trade/",
+      "latency": "~15ms", 
+      "region": "Auckland Edge (Cloudflare)",
+      "purpose": "Live market data and execution optimization",
+      "authentication": "Session-based"
+    }
+  },
+  
+  "fallbackEndpoints": {
+    "apiGateway": {
+      "url": "https://axiom-fra.gateway.astralane.io",
+      "latency": "~300ms",
+      "region": "Frankfurt",
+      "purpose": "API access when Auckland unavailable"
+    }
+  },
+  
+  "performanceOptimization": {
+    "pingLatency": "9.815ms",
+    "httpsLatency": "199ms", 
+    "websocketLatency": "<50ms estimated",
+    "advantage": "25x faster than Frankfurt for real-time data"
+  },
+  
+  "tradingConfiguration": {
+    "prioritizeSpeed": true,
+    "useAucklandFirst": true,
+    "maxLatencyThreshold": "50ms",
+    "enableCompression": true,
+    "keepAliveConnections": true
+  },
+  
+  "discoveredInfrastructure": {
+    "cloudflareIPs": ["172.66.42.221", "172.66.41.35"],
+    "edgeLocation": "AKL (Auckland)",
+    "provider": "Cloudflare Enterprise",
+    "geographicAdvantage": "Optimal for Oceania region"
+  }
+} 

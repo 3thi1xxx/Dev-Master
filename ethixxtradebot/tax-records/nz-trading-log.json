@@ -1,0 +1,36 @@
+[
+  {
+    "id": "1755081724851_b70hb4ins",
+    "timestamp": "2025-08-13T10:42:04.851Z",
+    "nzTimestamp": "13/08/2025, 10:42:04 pm",
+    "taxYear": 2025,
+    "tradeType": "SELL",
+    "tokenPair": "TEST_ARBITRAGE/SOL",
+    "tokenSymbol": "TEST_ARBITRAGE",
+    "solAmount": 0.013386572451133066,
+    "solPriceUsd": 250,
+    "usdToNzdRate": 1.65,
+    "solPriceNzd": 412.5,
+    "tradeValueUsd": 3.3466431127832665,
+    "tradeValueNzd": 5.52196113609239,
+    "transactionFee": 0,
+    "platformFee": 0,
+    "totalFeesUsd": null,
+    "totalFeesNzd": null,
+    "whaleSignalSource": "arbitrage",
+    "signalConfidence": 90,
+    "tradeRationale": "Micro-test: arbitrage opportunity",
+    "executionLatency": 70,
+    "realizedPnlUsd": 0.10181348598263887,
+    "exchangeRates": {
+      "usdToNzd": 1.65,
+      "solToUsd": 250,
+      "solToNzd": 412.5,
+      "timestamp": "2025-08-13T10:42:04.851Z",
+      "source": "FALLBACK_RATES"
+    },
+    "taxableEvent": true,
+    "capitalGain": false,
+    "capitalLoss": false
+  }
+]

@@ -1,0 +1,145 @@
+{
+  "description": "Compliance-first configuration for Axiom ToS adherence",
+  "riskLevel": "LOW-MODERATE",
+  "complianceStrategy": "RESPECTFUL_OPTIMIZATION",
+  
+  "allowedActivities": {
+    "copyTrading": {
+      "enabled": true,
+      "description": "Using Axiom's built-in copy trading features",
+      "riskLevel": "LOW",
+      "implementation": "Platform-integrated whale wallet copying"
+    },
+    "automatedStrategies": {
+      "enabled": true, 
+      "description": "Axiom's provided automated trading features",
+      "riskLevel": "LOW",
+      "implementation": "One-click execution, trading bots, snipers"
+    },
+    "apiAccess": {
+      "enabled": true,
+      "description": "Legitimate API usage within rate limits",
+      "riskLevel": "LOW-MODERATE",
+      "implementation": "Respectful data consumption, proper authentication"
+    },
+    "rewardFarming": {
+      "enabled": true,
+      "description": "Earning trading rewards through volume",
+      "riskLevel": "LOW",
+      "implementation": "Legitimate trading to earn platform rewards"
+    }
+  },
+  
+  "riskMitigation": {
+    "rateLimiting": {
+      "websocketReconnect": "5-60s exponential backoff",
+      "apiRequests": "Respect platform limits, no spam",
+      "tradingFrequency": "Conservative position sizing",
+      "maxConcurrentConnections": 1
+    },
+    "infrastructureRespect": {
+      "noDisruption": "Never overwhelm their servers",
+      "fairUsage": "Share bandwidth responsibly", 
+      "properAuthentication": "Always use valid JWT tokens",
+      "networkCourtesy": "Graceful connection handling"
+    },
+    "jurisdictionalCompliance": {
+      "location": "New Zealand (ALLOWED)",
+      "vpnPolicy": "No VPN circumvention",
+      "kycReadiness": "Prepared for verification if requested",
+      "sanctionsCompliance": "Not on any prohibited lists"
+    }
+  },
+  
+  "boundaryPushing": {
+    "speedOptimization": {
+      "aucklandEdge": "Leverage 10ms latency advantage",
+      "connectionOptimization": "Use fastest available endpoints",
+      "executionSpeed": "Optimize within rate limits",
+      "riskLevel": "LOW"
+    },
+    "dataIntelligence": {
+      "whaleTracking": "Monitor 7 high-performance wallets",
+      "marketConditions": "Real-time fee optimization",
+      "sentimentAnalysis": "Social signal integration",
+      "riskLevel": "LOW"
+    },
+    "strategicAdvantage": {
+      "positionSizing": "Conservative but optimized",
+      "profitTargets": "8% target, 4% stop-loss",
+      "marketTiming": "Real-time signal freshness (8s)",
+      "riskLevel": "LOW-MODERATE"
+    }
+  },
+  
+  "prohibitedActivities": {
+    "neverDo": [
+      "VPN to circumvent geo-restrictions",
+      "Bypass security measures",
+      "Disrupt other users' access",
+      "Overwhelm network infrastructure", 
+      "Evade technological measures",
+      "Violate AML/sanctions compliance",
+      "Misrepresent location or identity"
+    ]
+  },
+  
+  "operationalLimits": {
+    "tradingVolume": {
+      "maxTradeSize": "0.06 SOL (~$15)",
+      "maxTradesPerHour": "12 (conservative)",
+      "cooldownPeriod": "180s between trades",
+      "dailyVolumeLimit": "Reasonable for individual trader"
+    },
+    "connectionBehavior": {
+      "reconnectAttempts": "10 max with exponential backoff",
+      "reconnectDelay": "5-60s progressive delay",
+      "connectionTimeout": "30s reasonable timeout",
+      "gracefulDisconnection": "Always close connections properly"
+    },
+    "dataConsumption": {
+      "websocketMessages": "Process all received data",
+      "apiCalls": "Only when necessary",
+      "respectBandwidth": "Efficient data handling",
+      "noDataHoarding": "Real-time processing only"
+    }
+  },
+  
+  "complianceMonitoring": {
+    "selfAudit": [
+      "Monitor connection frequency",
+      "Track trading volumes", 
+      "Ensure proper authentication",
+      "Verify jurisdiction compliance",
+      "Document legitimate use cases"
+    ],
+    "warningThresholds": {
+      "connectionErrors": "Stop if >50% failure rate",
+      "tradingFrequency": "Alert if approaching limits",
+      "latencyDegradation": "Switch endpoints if >500ms",
+      "authenticationFailures": "Stop trading if tokens expire"
+    }
+  },
+  
+  "strategicPositioning": {
+    "legitimateTrader": {
+      "positionAs": "Sophisticated individual trader",
+      "valueProposition": "Generate trading fees for platform",
+      "compliance": "Exceed minimum requirements",
+      "cooperation": "Work with platform, not against"
+    },
+    "platformBenefit": {
+      "tradingFees": "Generate revenue for Axiom",
+      "liquidityProvision": "Add to market depth",
+      "rewardProgram": "Participate in official programs", 
+      "communityMember": "Legitimate platform user"
+    }
+  },
+  
+  "riskAssessment": {
+    "overall": "LOW-MODERATE",
+    "mitigationStrategy": "COMPLIANCE-FIRST",
+    "emergencyProtocol": "Immediate stop if ToS concerns arise",
+    "legalStatus": "Fully compliant individual trading"
+  }
+} 

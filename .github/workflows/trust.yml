@@ -1,0 +1,19 @@
+name: trust
+on: [push]
+jobs:
+  trust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci || true
+      - run: cbsh/build-manifest.sh
+      - run: npm run manifest:verify
+      - run: OPERATOR_SIGIL_KEY="${{ secrets.OPERATOR_SIGIL_KEY }}" npm run manifest:sign
+      - run: npm run manifest:verify-sig
+      - run: node src/council/ClaudeAgentCouncil.cjs --proposal proposals/publish-manifest.json || true
+      - run: cbsh/run-reflection.sh
+      - run: cbsh/run-trust.sh
+      - run: jq -e 'select(.trust_score >= 0.35)' trustmap.json >/dev/null || { echo "Trust below SLO"; exit 1; } 

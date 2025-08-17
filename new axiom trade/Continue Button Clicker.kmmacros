@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+<dict>
+	<key>Macros</key>
+	<array>
+		<dict>
+			<key>Actions</key>
+			<array>
+				<!-- While AutoContinueEnabled = 1 -->
+				<dict>
+					<key>ActionUID</key>
+					<string>9D2A51A6-4B59-4E2F-98C7-E9F8A20DF9F0</string>
+					<key>IsDisclosed</key>
+					<true/>
+					<key>MacroActionType</key>
+					<string>While</string>
+					<key>Actions</key>
+					<array>
+						<!-- Pause Until VS Code is frontmost -->
+						<dict>
+							<key>ActionUID</key>
+							<string>5B6B353C-771D-493F-BCB1-444A6B82A2A4</string>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>PauseUntil</string>
+							<key>Conditions</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>FrontApplication</string>
+									<key>FrontApplication</key>
+									<string>Visual Studio Code</string>
+									<key>FrontApplicationCondition</key>
+									<string>is</string>
+								</dict>
+							</array>
+						</dict>
+						<!-- Find Image on Screen -->
+						<dict>
+							<key>ActionUID</key>
+							<string>B9CF41A0-5CE1-4C4E-85C7-302F1D6A15B1</string>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>FindImage</string>
+							<key>Fuzz</key>
+							<real>30</real>
+							<key>ImagePath</key>
+							<string>/Users/DjEthixx/Desktop/KEYBOARD/continue_button.png</string>
+							<key>Variable</key>
+							<string>FoundImage</string>
+							<key>UniqueID</key>
+							<string>FBA2C7A2-61C5-4F4F-B987-65886DA8E306</string>
+						</dict>
+						<!-- Click at Found Image -->
+						<dict>
+							<key>ActionUID</key>
+							<string>24C3E6B6-3666-446A-A3BA-53F10185753B</string>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>MoveAndClick</string>
+							<key>ClickType</key>
+							<string>Single</string>
+							<key>Location</key>
+							<string>Variable</string>
+							<key>Variable</key>
+							<string>FoundImage</string>
+						</dict>
+						<!-- Display Text "Clicked Continue" -->
+						<dict>
+							<key>ActionUID</key>
+							<string>04DD7151-3893-432C-9D68-66F5737B398B</string>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>DisplayTextBriefly</string>
+							<key>Text</key>
+							<string>Clicked Continue</string>
+							<key>Seconds</key>
+							<real>1</real>
+						</dict>
+						<!-- Pause 2 seconds -->
+						<dict>
+							<key>ActionUID</key>
+							<string>DB6FC98C-B3AA-4247-AC6E-B8D6B2DAAE1F</string>
+							<key>IsDisclosed</key>
+							<true/>
+							<key>MacroActionType</key>
+							<string>Pause</string>
+							<key>Duration</key>
+							<real>2</real>
+						</dict>
+					</array>
+					<key>Conditions</key>
+					<array>
+						<dict>
+							<key>ConditionType</key>
+							<string>Variable</string>
+							<key>Variable</key>
+							<string>AutoContinueEnabled</string>
+							<key>Operator</key>
+							<string>is</string>
+							<key>Value</key>
+							<string>1</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>IsActive</key>
+			<true/>
+			<key>MacroName</key>
+			<string>Continue Button Clicker</string>
+			<key>Triggers</key>
+			<array/>
+			<key>UID</key>
+			<string>420109D0-EA2F-4A03-B67E-3B7AF2C43E16</string>
+		</dict>
+	</array>
+	<key>Name</key>
+	<string>VS Code AI Macros</string>
+	<key>UID</key>
+	<string>856AFC6B-5B8D-4A18-A8D2-FB27266850D9</string>
+</dict>
+</array>
+</plist>

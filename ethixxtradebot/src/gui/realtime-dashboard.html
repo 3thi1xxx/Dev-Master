@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHIXXTRADEBOT - Real-Time Trading Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Portfolio Stats Bar */
+        .portfolio-bar {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-live {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-live .label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 5px;
+        }
+
+        .stat-live .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .stat-live .change {
+            font-size: 0.9rem;
+            margin-left: 5px;
+        }
+
+        .positive { color: #22c55e; }
+        .negative { color: #ef4444; }
+        .neutral { color: #94a3b8; }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr 350px;
+            gap: 20px;
+            padding: 20px;
+            height: calc(100vh - 200px);
+        }
+
+        /* Panels */
+        .panel {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow-y: auto;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .panel-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Positions Table */
+        .positions-table {
+            width: 100%;
+            font-size: 0.9rem;
+        }
+
+        .positions-table th {
+            text-align: left;
+            padding: 8px;
+            color: #94a3b8;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .positions-table td {
+            padding: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .position-row {
+            transition: all 0.3s ease;
+        }
+
+        .position-row:hover {
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Order Flow */
+        .order-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .order-item {
+            display: grid;
+            grid-template-columns: 60px 1fr 80px 80px;
+            gap: 10px;
+            padding: 5px 10px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            animation: slideIn 0.3s ease;
+        }
+
+        .order-buy {
+            border-left: 3px solid #22c55e;
+        }
+
+        .order-sell {
+            border-left: 3px solid #ef4444;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Whale Tracker */
+        .whale-card {
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-left: 3px solid #8b5cf6;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* AI Metrics */
+        .ai-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .metric-card {
+            background: rgba(255,255,255,0.03);
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        /* Charts */
+        .chart-container {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 15px;
+            height: 250px;
+        }
+
+        /* Alerts */
+        .alert {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(34, 197, 94, 0.9);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            animation: slideDown 0.3s ease;
+            z-index: 1000;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        /* Auckland Advantage Badge */
+        .auckland-badge {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(45deg, #00d4ff, #7c3aed);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Learning Panel */
+        .learning-panel {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <!-- Portfolio Stats Bar -->
+    <div class="portfolio-bar">
+        <div class="stat-live">
+            <div class="label">Portfolio Value</div>
+            <div class="value" id="portfolioValue">$10,000</div>
+            <span class="change positive" id="portfolioChange">+0.00%</span>
+        </div>
+        <div class="stat-live">
+            <div class="label">Daily P&L</div>
+            <div class="value" id="dailyPnL">$0.00</div>
+            <span class="change neutral" id="dailyPnLPercent">0.00%</span>
+        </div>
+        <div class="stat-live">
+            <div class="label">Open Positions</div>
+            <div class="value" id="openPositions">0</div>
+        </div>
+        <div class="stat-live">
+            <div class="label">Win Rate</div>
+            <div class="value" id="winRate">0%</div>
+        </div>
+        <div class="stat-live">
+            <div class="label">Auckland Latency</div>
+            <div class="value" id="latency">254ms</div>
+            <span class="auckland-badge">6.5x FASTER</span>
+        </div>
+        <div class="stat-live">
+            <div class="label">Active Strategies</div>
+            <div class="value" id="activeStrategies">0</div>
+        </div>
+    </div>
+
+    <!-- Main Trading Grid -->
+    <div class="main-grid">
+        <!-- Left: Positions Panel -->
+        <div class="panel positions-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">📊 Active Positions</h3>
+                <span id="positionCount">0</span>
+            </div>
+            <table class="positions-table">
+                <thead>
+                    <tr>
+                        <th>Token</th>
+                        <th>Entry</th>
+                        <th>Current</th>
+                        <th>P&L</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="positionsBody">
+                    <!-- Positions will be added here -->
+                </tbody>
+            </table>
+
+            <div class="panel-header" style="margin-top: 20px;">
+                <h3 class="panel-title">📈 Order Flow</h3>
+            </div>
+            <div class="order-flow" id="orderFlow">
+                <!-- Orders will be added here -->
+            </div>
+        </div>
+
+        <!-- Center: Charts & Analysis -->
+        <div class="panel charts-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">🎯 Market Analysis</h3>
+                <span id="analysisStatus">LIVE</span>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+
+            <div class="panel-header">
+                <h3 class="panel-title">⚡ Surge Opportunities</h3>
+            </div>
+            <div id="surgeList">
+                <!-- Surge opportunities will be added here -->
+            </div>
+
+            <div class="panel-header" style="margin-top: 20px;">
+                <h3 class="panel-title">🔥 Hot Tokens</h3>
+            </div>
+            <div id="hotTokens">
+                <!-- Hot tokens will be listed here -->
+            </div>
+        </div>
+
+        <!-- Right: Intelligence Panel -->
+        <div class="panel intelligence-panel">
+            <div class="panel-header">
+                <h3 class="panel-title">🐋 Whale Tracker</h3>
+                <span id="whaleCount">0</span>
+            </div>
+            <div id="whaleActivity">
+                <!-- Whale activity will be added here -->
+            </div>
+
+            <div class="panel-header" style="margin-top: 20px;">
+                <h3 class="panel-title">🧠 AI Signals</h3>
+            </div>
+            <div id="aiSignals">
+                <!-- AI signals will be added here -->
+            </div>
+
+            <div class="panel-header" style="margin-top: 20px;">
+                <h3 class="panel-title">🔔 Alerts</h3>
+            </div>
+            <div id="alertsFeed">
+                <!-- Alerts will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom: Learning Metrics -->
+    <div class="learning-panel">
+        <div class="metric-card">
+            <div class="metric-value" id="patternsDetected">0</div>
+            <div class="metric-label">Patterns Detected</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value" id="confidenceScore">0%</div>
+            <div class="metric-label">AI Confidence</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value" id="tradesExecuted">0</div>
+            <div class="metric-label">Trades Today</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value" id="sharpeRatio">0.0</div>
+            <div class="metric-label">Sharpe Ratio</div>
+        </div>
+    </div>
+
+    <script>
+        // Real-time Dashboard Controller
+        class RealtimeDashboard {
+            constructor() {
+                this.socket = null;
+                this.positions = new Map();
+                this.orders = [];
+                this.whales = new Map();
+                this.priceChart = null;
+                this.init();
+            }
+
+            init() {
+                // Connect to WebSocket server
+                this.socket = io(window.location.origin);
+                this.setupEventListeners();
+                this.initChart();
+                this.requestNotificationPermission();
+                console.log('🚀 Real-time dashboard initialized');
+            }
+
+            setupEventListeners() {
+                // Portfolio updates
+                this.socket.on('portfolio-update', (data) => {
+                    this.updatePortfolioStats(data);
+                });
+
+                // Position updates
+                this.socket.on('position-update', (position) => {
+                    this.updatePosition(position);
+                });
+
+                // New trades
+                this.socket.on('trade-executed', (trade) => {
+                    this.addTradeToFlow(trade);
+                    this.showNotification('Trade Executed', `${trade.side} ${trade.token} @ ${trade.price}`);
+                });
+
+                // Whale activity
+                this.socket.on('whale-activity', (whale) => {
+                    this.trackWhale(whale);
+                });
+
+                // AI signals
+                this.socket.on('ai-signal', (signal) => {
+                    this.displayAISignal(signal);
+                });
+
+                // Surge opportunities
+                this.socket.on('surge-opportunity', (surge) => {
+                    this.displaySurge(surge);
+                });
+
+                // Learning updates
+                this.socket.on('learning-update', (metrics) => {
+                    this.updateLearningMetrics(metrics);
+                });
+
+                // Birdeye WebSocket data
+                this.socket.on('birdeye-update', (data) => {
+                    if (data.type === 'NEW_TOKEN') {
+                        this.showAlert(`🆕 New Token: ${data.symbol || 'Unknown'}`, 'info');
+                    }
+                    if (data.type === 'LARGE_TRADE') {
+                        this.addWhaleAlert(data);
+                    }
+                });
+
+                // Price updates
+                this.socket.on('price-update', (data) => {
+                    this.updatePriceChart(data);
+                });
+
+                // System metrics
+                this.socket.on('system-metrics', (metrics) => {
+                    this.updateSystemMetrics(metrics);
+                });
+            }
+
+            updatePortfolioStats(data) {
+                // Update portfolio value
+                const portfolioEl = document.getElementById('portfolioValue');
+                const prevValue = parseFloat(portfolioEl.textContent.replace('$', '').replace(',', ''));
+                const newValue = data.totalValue || 10000;
+                
+                portfolioEl.textContent = `$${newValue.toFixed(2)}`;
+                
+                // Update change percentage
+                const changeEl = document.getElementById('portfolioChange');
+                const changePercent = ((newValue - 10000) / 10000 * 100).toFixed(2);
+                changeEl.textContent = `${changePercent >= 0 ? '+' : ''}${changePercent}%`;
+                changeEl.className = `change ${changePercent >= 0 ? 'positive' : 'negative'}`;
+
+                // Update daily P&L
+                if (data.dailyPnL) {
+                    document.getElementById('dailyPnL').textContent = `$${data.dailyPnL.toFixed(2)}`;
+                    document.getElementById('dailyPnLPercent').textContent = `${data.dailyPnLPercent.toFixed(2)}%`;
+                    document.getElementById('dailyPnLPercent').className = `change ${data.dailyPnL >= 0 ? 'positive' : 'negative'}`;
+                }
+
+                // Update positions count
+                document.getElementById('openPositions').textContent = data.openPositions || 0;
+                document.getElementById('positionCount').textContent = data.openPositions || 0;
+
+                // Update win rate
+                if (data.winRate) {
+                    document.getElementById('winRate').textContent = `${data.winRate.toFixed(1)}%`;
+                }
+            }
+
+            updatePosition(position) {
+                const tbody = document.getElementById('positionsBody');
+                let row = document.getElementById(`position-${position.id}`);
+                
+                if (!row) {
+                    row = document.createElement('tr');
+                    row.id = `position-${position.id}`;
+                    row.className = 'position-row';
+                    tbody.appendChild(row);
+                }
+
+                const pnlClass = position.pnl >= 0 ? 'positive' : 'negative';
+                const timeHeld = this.formatDuration(Date.now() - position.entryTime);
+
+                row.innerHTML = `
+                    <td>${position.token}</td>
+                    <td>$${position.entry.toFixed(6)}</td>
+                    <td>$${position.current.toFixed(6)}</td>
+                    <td class="${pnlClass}">${position.pnl >= 0 ? '+' : ''}${position.pnl.toFixed(2)}%</td>
+                    <td>${timeHeld}</td>
+                `;
+
+                // Flash animation
+                row.style.animation = 'pulse 0.5s';
+                setTimeout(() => row.style.animation = '', 500);
+            }
+
+            addTradeToFlow(trade) {
+                const flowContainer = document.getElementById('orderFlow');
+                const orderItem = document.createElement('div');
+                orderItem.className = `order-item order-${trade.side}`;
+                
+                const time = new Date().toLocaleTimeString();
+                orderItem.innerHTML = `
+                    <span>${time}</span>
+                    <span>${trade.token}</span>
+                    <span>$${trade.price.toFixed(6)}</span>
+                    <span>$${trade.amount.toFixed(2)}</span>
+                `;
+                
+                flowContainer.insertBefore(orderItem, flowContainer.firstChild);
+                
+                // Keep only last 50 orders
+                while (flowContainer.children.length > 50) {
+                    flowContainer.removeChild(flowContainer.lastChild);
+                }
+            }
+
+            trackWhale(whale) {
+                const container = document.getElementById('whaleActivity');
+                const whaleCard = document.createElement('div');
+                whaleCard.className = 'whale-card';
+                
+                whaleCard.innerHTML = `
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>🐋 ${whale.wallet.slice(0, 6)}...${whale.wallet.slice(-4)}</span>
+                        <span class="${whale.action === 'BUY' ? 'positive' : 'negative'}">${whale.action}</span>
+                    </div>
+                    <div style="margin-top: 5px;">
+                        <span>${whale.token}</span>
+                        <span style="float: right;">$${whale.amount.toFixed(0)}</span>
+                    </div>
+                `;
+                
+                container.insertBefore(whaleCard, container.firstChild);
+                
+                // Keep only last 10 whales
+                while (container.children.length > 10) {
+                    container.removeChild(container.lastChild);
+                }
+            }
+
+            displayAISignal(signal) {
+                const container = document.getElementById('aiSignals');
+                const signalEl = document.createElement('div');
+                signalEl.style.cssText = 'padding: 10px; background: rgba(255,255,255,0.03); border-radius: 6px; margin-bottom: 8px;';
+                
+                signalEl.innerHTML = `
+                    <div style="font-weight: 600; color: #00d4ff;">${signal.pattern}</div>
+                    <div style="font-size: 0.9rem; color: #94a3b8; margin-top: 5px;">
+                        Confidence: ${(signal.confidence * 100).toFixed(1)}%
+                    </div>
+                    <div style="font-size: 0.85rem; margin-top: 5px;">${signal.action}</div>
+                `;
+                
+                container.insertBefore(signalEl, container.firstChild);
+                
+                // Keep only last 5 signals
+                while (container.children.length > 5) {
+                    container.removeChild(container.lastChild);
+                }
+            }
+
+            displaySurge(surge) {
+                const container = document.getElementById('surgeList');
+                const surgeEl = document.createElement('div');
+                surgeEl.style.cssText = 'padding: 12px; background: rgba(34, 197, 94, 0.1); border-left: 3px solid #22c55e; border-radius: 4px; margin-bottom: 10px;';
+                
+                surgeEl.innerHTML = `
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="font-weight: 600;">${surge.token}</span>
+                        <span style="color: #22c55e;">+${surge.change.toFixed(1)}%</span>
+                    </div>
+                    <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 5px;">
+                        Volume: $${surge.volume.toFixed(0)} | ${surge.timeAgo}
+                    </div>
+                `;
+                
+                container.insertBefore(surgeEl, container.firstChild);
+                
+                // Keep only last 10 surges
+                while (container.children.length > 10) {
+                    container.removeChild(container.lastChild);
+                }
+            }
+
+            updateLearningMetrics(metrics) {
+                document.getElementById('patternsDetected').textContent = metrics.patterns || 0;
+                document.getElementById('confidenceScore').textContent = `${(metrics.confidence * 100).toFixed(1)}%`;
+                document.getElementById('tradesExecuted').textContent = metrics.trades || 0;
+                document.getElementById('sharpeRatio').textContent = metrics.sharpe?.toFixed(2) || '0.0';
+            }
+
+            updateSystemMetrics(metrics) {
+                document.getElementById('latency').textContent = `${metrics.latency || 254}ms`;
+                document.getElementById('activeStrategies').textContent = metrics.strategies || 0;
+            }
+
+            initChart() {
+                const canvas = document.getElementById('priceChart');
+                const ctx = canvas.getContext('2d');
+                // Simple price chart implementation
+                // In production, use Chart.js or similar library
+            }
+
+            updatePriceChart(data) {
+                // Update chart with new price data
+                // Implementation depends on charting library
+            }
+
+            showAlert(message, type = 'success') {
+                const alert = document.createElement('div');
+                alert.className = 'alert';
+                alert.style.background = type === 'success' ? 'rgba(34, 197, 94, 0.9)' : 
+                                         type === 'warning' ? 'rgba(234, 179, 8, 0.9)' : 
+                                         'rgba(59, 130, 246, 0.9)';
+                alert.textContent = message;
+                document.body.appendChild(alert);
+                
+                setTimeout(() => {
+                    alert.style.animation = 'slideDown 0.3s reverse';
+                    setTimeout(() => alert.remove(), 300);
+                }, 3000);
+            }
+
+            showNotification(title, body) {
+                if (Notification.permission === 'granted') {
+                    new Notification(title, { body, icon: '/favicon.ico' });
+                }
+            }
+
+            requestNotificationPermission() {
+                if ('Notification' in window && Notification.permission === 'default') {
+                    Notification.requestPermission();
+                }
+            }
+
+            formatDuration(ms) {
+                const seconds = Math.floor(ms / 1000);
+                const minutes = Math.floor(seconds / 60);
+                const hours = Math.floor(minutes / 60);
+                
+                if (hours > 0) return `${hours}h ${minutes % 60}m`;
+                if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
+                return `${seconds}s`;
+            }
+
+            addWhaleAlert(data) {
+                const alertsFeed = document.getElementById('alertsFeed');
+                const alert = document.createElement('div');
+                alert.style.cssText = 'padding: 8px; background: rgba(139, 92, 246, 0.1); border-left: 3px solid #8b5cf6; margin-bottom: 5px; border-radius: 4px;';
+                alert.innerHTML = `🐋 Whale Trade: $${data.value?.toFixed(0) || '???'} ${data.token || ''}`;
+                alertsFeed.insertBefore(alert, alertsFeed.firstChild);
+                
+                while (alertsFeed.children.length > 10) {
+                    alertsFeed.removeChild(alertsFeed.lastChild);
+                }
+            }
+        }
+
+        // Initialize dashboard on page load
+        const dashboard = new RealtimeDashboard();
+    </script>
+</body>
+</html> 

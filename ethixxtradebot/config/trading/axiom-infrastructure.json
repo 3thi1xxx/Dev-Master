@@ -1,0 +1,105 @@
+{
+  "infrastructure": {
+    "gateways": {
+      "frankfurt": {
+        "url": "axiom-fra.gateway.astralane.io",
+        "purpose": "European gateway for reduced latency",
+        "api_key": "AxiomozyNSTbBlP88VY35BvSdDVS3du1be8Q1VMmconPgpWFVWnpmfnpUrhRj97F",
+        "health_endpoint": "/gethealth",
+        "location": "Frankfurt, Germany",
+        "ip": "64.130.40.232",
+        "performance": "sub-100ms for EU users"
+      },
+      "predictions": {
+        "us_east": "axiom-use.gateway.astralane.io",
+        "us_west": "axiom-usw.gateway.astralane.io", 
+        "asia": "axiom-asia.gateway.astralane.io",
+        "global": "axiom.gateway.astralane.io"
+      }
+    },
+    
+    "wallet_infrastructure": {
+      "provider": "Turnkey",
+      "endpoint": "api.turnkey.com",
+      "security": {
+        "cloudflare_protected": true,
+        "cors_enabled": true,
+        "ssl_grade": "A+",
+        "session_duration": "30 days"
+      },
+      "crypto_schemes": {
+        "session_keys": "CREDENTIAL_TYPE_READ_WRITE_SESSION_KEY_P256",
+        "api_keys": "CREDENTIAL_TYPE_API_KEY_ED25519",
+        "solana_integration": true
+      }
+    },
+
+    "discovered_api_keys": [
+      {
+        "id": "48077cae-3eab-402a-ae30-53be5593c863",
+        "name": "Axiom Nonce: 0d34d83346ad0438",
+        "public_key": "0247e7f4e01f8c5e7dfc1cf11b7a1deb9eb125836db68dfa37c3e5442afe681ed5",
+        "created": "2025-07-13",
+        "expires": "30 days",
+        "type": "P256 Session"
+      },
+      {
+        "id": "2b707595-3834-449b-be1a-bc7203f34a33", 
+        "name": "Solana Wallet",
+        "public_key": "0b0e668a37907426a35d43d17535f91b72af9cc5e637bbd6118b182d4467f66e",
+        "type": "Ed25519 API Key",
+        "purpose": "Solana blockchain operations"
+      }
+    ],
+
+    "performance_optimizations": {
+      "geographic_routing": "Automatic gateway selection by region",
+      "cloudflare_acceleration": "Global CDN with edge caching",
+      "connection_persistence": "Keep-alive enabled",
+      "compression": "gzip, deflate, br, zstd supported"
+    },
+
+    "security_headers": {
+      "cors": "Strict origin policy", 
+      "ssl": "HSTS enabled",
+      "caching": "no-cache for sensitive endpoints",
+      "user_agent_tracking": "Chrome 138 detection"
+    },
+
+    "extracted_intelligence": {
+      "timestamp": "2025-08-13T08:39:00Z",
+      "user_id": "b26fb524-fb1f-413d-a4bb-c35b0ff1960a",
+      "organization_id": "eb1dcea7-114f-4b39-91ff-b01350ed0eff",
+      "gateway_health": "operational",
+      "turnkey_session": "active"
+    }
+  },
+
+  "exploitation_opportunities": {
+    "gateway_discovery": {
+      "method": "Test regional gateways for fastest response",
+      "value": "Reduce latency by 50-200ms",
+      "implementation": "Auto-detect optimal gateway"
+    },
+    
+    "api_key_rotation": {
+      "method": "Monitor Turnkey API key lifecycle",
+      "value": "Predict and prepare for key expiration",
+      "implementation": "30-day renewal automation"
+    },
+    
+    "infrastructure_intelligence": {
+      "method": "Map complete Astralane gateway network",
+      "value": "Ultimate speed optimization",
+      "implementation": "Intelligent routing based on market conditions"
+    }
+  },
+
+  "integration_priorities": [
+    "Implement gateway auto-discovery",
+    "Add Turnkey wallet integration", 
+    "Build geographic routing optimization",
+    "Create infrastructure health monitoring",
+    "Develop predictive gateway selection"
+  ]
+} 

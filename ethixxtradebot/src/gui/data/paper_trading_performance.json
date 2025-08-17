@@ -1,0 +1,21 @@
+{
+  "totalTrades": 2,
+  "winningTrades": 0,
+  "losingTrades": 2,
+  "totalProfit": 0,
+  "totalLoss": null,
+  "winRate": 0,
+  "averageReturn": null,
+  "bestTrade": {
+    "profit": 0,
+    "token": "",
+    "time": 0
+  },
+  "worstTrade": {
+    "loss": 0,
+    "token": "",
+    "time": 0
+  },
+  "startTime": 1755260305489,
+  "lastUpdate": 1755260789768
+}

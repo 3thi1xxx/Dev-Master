@@ -1,0 +1,15 @@
+.git
+node_modules
+out
+sandbox/replay
+tmp
+dist
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+desktop.ini
+snapshots
+logs/*.log
+*.tmp
+*.pid 

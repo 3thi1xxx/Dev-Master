@@ -1,0 +1,283 @@
+{
+  "name": "axiom-stealth-system",
+  "version": "1.0.0",
+  "description": "Intelligence-first authentication system for Axiom APIs with ban prevention and human behavior simulation",
+  "author": "DjEthixx",
+  "license": "MIT",
+  "type": "module",
+  "build": {
+    "timestamp": "2025-01-16T12:00:00Z",
+    "environment": "production",
+    "target": "node18+",
+    "architecture": "universal"
+  },
+  "components": {
+    "core": {
+      "AxiomStealthSystem": {
+        "path": "agents/axiom/AxiomStealthSystem.js",
+        "size": "12KB",
+        "role": "Master controller and orchestrator",
+        "dependencies": ["AxiomStealthScout", "AxiomStealthHandshake", "AxiomCookieIntelligence"],
+        "exports": ["AxiomStealthSystem", "default"]
+      },
+      "AxiomStealthScout": {
+        "path": "agents/axiom/AxiomStealthScout.js", 
+        "size": "11KB",
+        "role": "Intelligence reconnaissance and endpoint discovery",
+        "dependencies": [],
+        "exports": ["AxiomStealthScout", "default"]
+      },
+      "AxiomStealthHandshake": {
+        "path": "agents/axiom/AxiomStealthHandshake.js",
+        "size": "10KB", 
+        "role": "Human behavior simulation and authentication",
+        "dependencies": ["AxiomStealthScout", "crypto"],
+        "exports": ["AxiomStealthHandshake", "default"]
+      },
+      "AxiomCookieIntelligence": {
+        "path": "agents/axiom/AxiomCookieIntelligence.js",
+        "size": "11KB",
+        "role": "Session learning and cookie pattern recognition",
+        "dependencies": [],
+        "exports": ["AxiomCookieIntelligence", "default"]
+      }
+    },
+    "legacy": {
+      "AxiomAPI6Client": {
+        "path": "agents/axiom/AxiomAPI6Client.js",
+        "size": "5KB",
+        "role": "API6 client with live trending data",
+        "dependencies": ["AxiomHandshake"],
+        "exports": ["AxiomAPI6Client", "default"]
+      },
+      "AxiomLiveExecutor": {
+        "path": "agents/axiom/AxiomLiveExecutor.js", 
+        "size": "6KB",
+        "role": "Live trading executor with real signals",
+        "dependencies": ["AxiomAPI6Client"],
+        "exports": ["AxiomLiveExecutor", "default"]
+      },
+      "AxiomHandshake": {
+        "path": "agents/axiom/AxiomHandshake.js",
+        "size": "5KB",
+        "role": "Original wallet-nonce handshake implementation",
+        "dependencies": ["crypto"],
+        "exports": ["performHandshake", "testConnection", "default"]
+      }
+    }
+  },
+  "scripts": {
+    "test:stealth": {
+      "command": "./cbsh/axiom-stealth-proof.sh",
+      "description": "Run comprehensive stealth system validation",
+      "output": "reports/axiom-stealth-proof-*.html"
+    },
+    "test:legacy": {
+      "command": "./cbsh/axiom-live-proof.sh", 
+      "description": "Run legacy system integration tests",
+      "output": "reports/axiom-live-proof-*.html"
+    },
+    "deploy:stealth": {
+      "command": "node -e \"import('./agents/axiom/AxiomStealthSystem.js').then(m => console.log('✅ Stealth system loaded'))\"",
+      "description": "Validate stealth system deployment"
+    }
+  },
+  "configuration": {
+    "files": [
+      {
+        "path": "config/axiom-live.config.json",
+        "role": "Main configuration file",
+        "required": true,
+        "fields": {
+          "axiom.wallet.address": "Solana wallet address (required)",
+          "axiom.wallet.privateKey": "Private key in base58 format (required)",
+          "axiom.api.endpoints": "List of API endpoints to use",
+          "axiom.trading.maxPositionUSD": "Maximum position size",
+          "axiom.safety.dryRun": "Safety mode (default: true)"
+        }
+      }
+    ]
+  },
+  "capabilities": {
+    "stealth": {
+      "reconnaissance": {
+        "description": "Passive endpoint discovery",
+        "features": ["Frontend analysis", "Pattern extraction", "Confidence scoring"],
+        "antiBan": true
+      },
+      "humanBehavior": {
+        "description": "Perfect human behavior simulation", 
+        "features": ["Realistic timing", "Browser fingerprinting", "Session continuity"],
+        "detectionResistance": "high"
+      },
+      "cookieIntelligence": {
+        "description": "Learning from browser sessions",
+        "features": ["Token pattern recognition", "Smart reuse", "Strength scoring"],
+        "adaptability": "learns and improves"
+      },
+      "banPrevention": {
+        "description": "Proactive ban detection and prevention",
+        "features": ["Signal detection", "Intelligent backoff", "Emergency reset"],
+        "reliability": "enterprise-grade"
+      }
+    },
+    "legacy": {
+      "api6Integration": {
+        "description": "Authenticated API6 client",
+        "endpoints": ["meme-trending", "total-account-value-v2", "batched-wallet-token-accounts"],
+        "authentication": "JWT token via cookies"
+      },
+      "liveTrading": {
+        "description": "Real-time signal generation",
+        "dataSource": "api6.axiom.trade trending data",
+        "filtering": "Age, liquidity, volume, market cap based",
+        "safety": "Trust/killswitch integration"
+      }
+    }
+  },
+  "deployment": {
+    "requirements": {
+      "node": ">=18.0.0",
+      "modules": ["crypto", "fs", "url"],
+      "network": "Internet access required for API calls",
+      "permissions": "File system read/write for reports and config"
+    },
+    "installation": {
+      "steps": [
+        "1. Clone/copy all files to target directory",
+        "2. Configure wallet credentials in config/axiom-live.config.json",
+        "3. Run chmod +x cbsh/*.sh to make scripts executable", 
+        "4. Test deployment with ./cbsh/axiom-stealth-proof.sh",
+        "5. Import and use AxiomStealthSystem in your code"
+      ]
+    },
+    "validation": {
+      "required": [
+        "Config file exists and has wallet credentials",
+        "All agent files are readable",
+        "Proof scripts are executable",
+        "Node.js modules are accessible"
+      ],
+      "recommended": [
+        "Test reconnaissance without auth first",
+        "Feed browser session data for intelligence",
+        "Monitor system status during operation",
+        "Use emergency reset if ban signals detected"
+      ]
+    }
+  },
+  "api": {
+    "main": {
+      "import": "import AxiomStealthSystem from './agents/axiom/AxiomStealthSystem.js'",
+      "constructor": "new AxiomStealthSystem({ walletAddress, privKeyBase58, logger })",
+      "methods": {
+        "initialize(browserData)": "Initialize with optional browser session data",
+        "authenticateStealthily()": "Perform stealth authentication cycle",
+        "getStatus()": "Get current system status and metrics",
+        "emergencyReset()": "Clear all state and start fresh"
+      }
+    },
+    "responses": {
+      "authentication": {
+        "success": {
+          "method": "'cookie_reuse' | 'stealth_handshake'",
+          "authToken": "JWT token ready for API calls",
+          "endpoint": "Active endpoint that was used",
+          "confidence": "Success probability score (0-1)"
+        },
+        "failure": {
+          "error": "Error message with failure reason",
+          "cooldown": "Automatic backoff period applied",
+          "banSignal": "Boolean indicating if ban was detected"
+        }
+      }
+    }
+  },
+  "security": {
+    "dataHandling": {
+      "walletKeys": "Never logged or transmitted",
+      "authTokens": "Cached locally, auto-expire after 14 minutes", 
+      "cookies": "Pattern learning only, no sensitive data stored",
+      "endpoints": "Intelligence cached to improve performance"
+    },
+    "antiDetection": {
+      "timing": "Human-like delays (1.5-4s between actions)",
+      "headers": "Perfect browser fingerprint matching",
+      "behavior": "Realistic user session simulation",
+      "fallback": "Graceful failures that don't trigger alarms"
+    }
+  },
+  "monitoring": {
+    "metrics": {
+      "successRate": "Authentication success percentage",
+      "averageLatency": "Time to complete authentication",
+      "banSignalCount": "Number of ban warnings detected",
+      "endpointHealth": "Confidence scores for known endpoints",
+      "sessionReuse": "Cookie intelligence effectiveness"
+    },
+    "alerts": {
+      "banSignal": "Immediate alert when ban indicators detected",
+      "cooldown": "Notification when entering backoff period",
+      "authFailure": "Failed authentication with reason",
+      "emergencyReset": "System state cleared and restarted"
+    }
+  },
+  "maintenance": {
+    "updates": {
+      "intelligence": "System learns and adapts automatically",
+      "endpoints": "Discovers new API endpoints via frontend analysis",
+      "timing": "Adjusts human behavior based on real user data",
+      "cookies": "Improves token recognition patterns"
+    },
+    "troubleshooting": {
+      "noEndpoints": "Run frontend analysis or provide browser data",
+      "authFailures": "Check wallet credentials and wait for cooldown",
+      "banSignals": "Use emergency reset and reduce usage frequency",
+      "configErrors": "Validate config file format and required fields"
+    }
+  },
+  "documentation": {
+    "files": [
+      {
+        "path": "README-AXIOM-STEALTH-SYSTEM.md",
+        "description": "Complete usage guide and API reference"
+      },
+      {
+        "path": "README-AXIOM-RESURRECTION.md", 
+        "description": "Legacy system integration documentation"
+      }
+    ],
+    "examples": {
+      "basic": "Simple authentication setup",
+      "advanced": "Integration with browser session data",
+      "monitoring": "Status checking and error handling",
+      "trading": "Integration with trading bot systems"
+    }
+  },
+  "support": {
+    "compatibility": {
+      "node": "18.x, 19.x, 20.x, 21.x",
+      "os": "macOS, Windows, Linux",
+      "browsers": "Chrome 120+, Safari 17+, Firefox 121+"
+    },
+    "performance": {
+      "memoryUsage": "~50MB typical",
+      "diskSpace": "~100KB for core files",
+      "networkBandwidth": "Minimal (human-like request patterns)",
+      "cpuUsage": "Low (event-driven architecture)"
+    }
+  },
+  "changelog": {
+    "1.0.0": {
+      "date": "2025-01-16",
+      "changes": [
+        "Initial release of Axiom Stealth System",
+        "Complete ban prevention and human behavior simulation",
+        "Intelligence-first endpoint discovery",
+        "Cookie learning and session management",
+        "Legacy system integration and resurrection",
+        "Comprehensive testing and validation scripts"
+      ]
+    }
+  }
+} 

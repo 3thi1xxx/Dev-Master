@@ -1,0 +1,191 @@
+# --- core infra noise ---
+.git/**
+*/.git/**
+**/.git/**
+.git/objects/**
+*/.git/objects/**
+**/.git/objects/**
+**/.git
+.git
+*/.git
+**/.git.*
+**/node_modules/**
+**/dist/**
+**/build/**
+**/.next/**
+**/.turbo/**
+**/coverage/**
+**/.cache/**
+**/.vite/**
+**/.parcel-cache/**
+**/.venv/**
+**/venv/**
+**/__pycache__/**
+**/.pytest_cache/**
+
+# system files
+**/.DS_Store
+**/.Spotlight-V100/**
+**/.Trash/**
+**/*.log
+**/*.tmp
+**/*.swp
+
+# build/tooling artifacts
+tools/manifest*
+tools/shards/*
+vault-locks
+logs-reset/**
+
+# specific large dirs
+whale_env/**
+axiom-electron/**
+AxiomTradeAPI-py-main/**
+axiom-sniper/**
+axiomtrade-archive/**
+node_modules/**
+
+# chad lockdown spine - legacy/large
+chad-lockdown-spine/legacy/**
+chad-lockdown-spine/legacy-axiom/**
+chad-lockdown-spine/legacy-intake/**
+chad-lockdown-spine/memory/**
+chad-lockdown-spine/spine-backup/**
+chad-lockdown-spine/node_modules/**
+chad-lockdown-spine/src/agent_memory/**
+
+# specific problem paths from legacy-intake - be VERY aggressive
+legacy-intake/**
+**/legacy-intake/**
+**/legacy-intake/axiom/src/**
+legacy-intake/axiom/src/axiomtrade-archive/gpt-vault/location_archive/**
+**/axiomtrade-archive/gpt-vault/location_archive/**
+**/gpt-vault/location_archive/**
+**/gpt-vault/**
+**/Dev/new axiom trade/axiom-trade/gpt-vault/**
+legacy-intake/axiom/src/Dev/new axiom trade/axiom-trade/gpt-vault/**
+legacy-intake/axiom/src/Dev/**
+
+# new axiom trade - heavy
+new axiom trade/axiom-trade/.venv/**
+new axiom trade/axiom-trade/chad-dashboard/**
+new axiom trade/axiom-trade/dashboard/**
+new axiom trade/axiom-trade/gpt-vault/backup/**
+new axiom trade/axiom-trade/gpt-vault/input/**
+new axiom trade/axiom-trade/gpt-vault/node_modules/**
+new axiom trade/axiom-trade/gpt-vault/**
+
+# media/binaries/datasets (one ext per line; no braces)
+**/*.zip
+**/*.tar
+**/*.tar.gz
+**/*.tgz
+**/*.rar
+**/*.7z
+**/*.gz
+**/*.bz2
+
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.webp
+**/*.avif
+**/*.svg
+**/*.ico
+**/*.psd
+**/*.ai
+**/*.sketch
+**/*.fig
+**/*.bmp
+**/*.tiff
+
+**/*.mp4
+**/*.mov
+**/*.avi
+**/*.mkv
+**/*.webm
+**/*.flv
+**/*.wmv
+**/*.m4v
+
+**/*.wav
+**/*.mp3
+**/*.flac
+**/*.aac
+**/*.ogg
+**/*.wma
+**/*.m4a
+
+**/*.pdf
+**/*.doc
+**/*.docx
+**/*.xls
+**/*.xlsx
+**/*.ppt
+**/*.pptx
+**/*.rtf
+
+**/*.sqlite
+**/*.sqlite3
+**/*.db
+**/*.mdb
+**/*.accdb
+
+**/*.parquet
+**/*.feather
+**/*.orc
+**/*.arrow
+**/*.hdf5
+
+**/*.onnx
+**/*.pt
+**/*.pth
+**/*.ckpt
+**/*.h5
+**/*.safetensors
+**/*.pkl
+**/*.pickle
+
+**/*.exe
+**/*.dmg
+**/*.pkg
+**/*.deb
+**/*.rpm
+**/*.msi
+**/*.appimage
+
+# tests & IDE
+**/__snapshots__/**
+**/test-results/**
+**/playwright-report/**
+**/playwright/.cache/**
+**/cypress/videos/**
+**/cypress/screenshots/**
+**/.nyc_output/**
+**/.idea/**
+**/.vscode/**
+.cursor/**
+**/*.code-workspace
+
+# temp/cache patterns
+**/tmp/**
+**/temp/**
+**/cache/**
+**/.temp/**
+**/.tmp/**
+**/Temp/**
+
+# misc volatile
+**/Screens dump/**
+**/*.location
+**/*.meta.json
+pending-docs-review/**
+memory/entropy/**
+memory/summarizes/**
+
+# NEW: never self-index packs and chat debris
+out/**
+.chat-drops/**
+sandbox/**
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)

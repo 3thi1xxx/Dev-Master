@@ -1,0 +1,67 @@
+{
+  "name": "ethixxtradebot",
+  "version": "3.0.0",
+  "description": "AI Trading System with consolidated architecture",
+  "main": "src/core/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/core/index.js",
+    "start:legacy": "node start.js",
+    "dev": "NODE_ENV=development node src/core/index.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "test:watch": "node --experimental-vm-modules node_modules/.bin/jest --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/.bin/jest --coverage",
+    "build": "echo 'No build required for Node.js'",
+    "clean": "rm -rf node_modules package-lock.json",
+    "install:fresh": "npm run clean && npm install",
+    "check:env": "node scripts/check-env.js",
+    "monitor": "node src/utils/monitor_data_flow.js",
+    "dashboard": "node gui/server.js",
+    "migration:check": "node scripts/migration/check-status.js",
+    "migration:run": "node scripts/migration/run-migration.js"
+  },
+  "files": [
+    "agents/axiom/*.js",
+    "cbsh/axiom-*.sh",
+    "config/axiom-*.json",
+    "README-AXIOM-*.md",
+    "manifest.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "@types/node": "^24.2.1",
+    "axios": "^1.11.0",
+    "axios-cookiejar-support": "^6.0.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "dotenv-cli": "^10.0.0",
+    "express": "^5.1.0",
+    "fastify": "^5.5.0",
+    "glob": "^11.0.3",
+    "ioredis": "^5.7.0",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^6.1.0",
+    "socket.io": "^4.8.1",
+    "technicalindicators": "^3.1.0",
+    "tough-cookie": "^5.1.2",
+    "ts-node": "^10.9.2",
+    "tweetnacl": "^1.0.3",
+    "typescript": "^5.9.2",
+    "ws": "^8.18.3"
+  },
+  "config": {
+    "configFile": "config/axiom-live.config.json",
+    "reportsDir": "reports",
+    "agentsDir": "agents/axiom"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.5",
+    "nock": "^14.0.10"
+  }
+}

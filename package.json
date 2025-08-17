@@ -1,0 +1,95 @@
+{
+  "name": "axiom-stealth-system",
+  "version": "1.0.0",
+  "description": "Production-ready cryptocurrency trading system with advanced stealth authentication, automatic endpoint rotation, and intelligent ban prevention for Axiom APIs",
+  "type": "module",
+  "main": "agents/axiom/AxiomStealthSystem.js",
+  "author": "DjEthixx",
+  "license": "MIT",
+  "keywords": [
+    "axiom",
+    "trading",
+    "authentication",
+    "stealth",
+    "ban-prevention",
+    "solana",
+    "api-client"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "exports": {
+    ".": "./agents/axiom/AxiomStealthSystem.js",
+    "./stealth": "./agents/axiom/AxiomStealthSystem.js",
+    "./scout": "./agents/axiom/AxiomStealthScout.js",
+    "./handshake": "./agents/axiom/AxiomStealthHandshake.js",
+    "./cookies": "./agents/axiom/AxiomCookieIntelligence.js",
+    "./api6": "./agents/axiom/AxiomAPI6Client.js",
+    "./legacy": "./agents/axiom/AxiomHandshake.js"
+  },
+  "scripts": {
+    "start:pipeline": "node scripts/runPipeline.js",
+    "dev:mock": "USE_MOCK_DATA=true dotenv -e .env.dev npm run start:pipeline",
+    "dev:dryrun": "USE_JUPITER_DRYRUN=true dotenv -e .env.dev npm run start:pipeline",
+    "dev:live": "USE_AXIOM_SHADOW=true dotenv -e .env.dev npm run start:pipeline",
+    "axiom:ping": "node scripts/axiomPing.js",
+    "axiom:shadow": "node scripts/axiomShadow.js",
+    "axiom:auto-refresh": "node scripts/axiomAutoRefresh.js",
+    "test:infrastructure": "node scripts/testGatewayOptimizer.js && node scripts/testAxiomWebSocket.js && node scripts/testTradingCluster.js",
+    "test:enhanced": "node scripts/testEnhancedSystem.js",
+    "test:flash": "node scripts/testFlashLoan.js",
+    "test:whale": "node scripts/testWalletSignals.js",
+    "test:rpc": "node scripts/testRPC.js",
+    "test:real-whale": "node scripts/testRealWhale.js",
+    "test:wallet-signals": "node scripts/testWalletSignals.js",
+    "dev:enhanced": "node scripts/runEnhancedPipeline.js",
+    "dev:copy-dry": "ALLOW_EXECUTE=false node scripts/runEnhancedPipeline.js",
+    "dev:copy-live": "ALLOW_EXECUTE=true node scripts/runEnhancedPipeline.js",
+    "dev:speed-dry": "timeout 60s node scripts/runSpeedOptimizedPipeline.js",
+    "dev:speed-live": "ALLOW_EXECUTE=true timeout 60s node scripts/runSpeedOptimizedPipeline.js",
+    "test:speed-monitor": "node services/HighSpeedWalletMonitor.js"
+  },
+  "files": [
+    "agents/axiom/*.js",
+    "cbsh/axiom-*.sh",
+    "config/axiom-*.json",
+    "README-AXIOM-*.md",
+    "manifest.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "@types/node": "^24.2.1",
+    "axios": "^1.11.0",
+    "axios-cookiejar-support": "^6.0.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^17.2.1",
+    "dotenv-cli": "^10.0.0",
+    "express": "^5.1.0",
+    "fastify": "^5.5.0",
+    "ioredis": "^5.7.0",
+    "node-fetch": "^3.3.2",
+    "p-limit": "^6.1.0",
+    "socket.io": "^4.8.1",
+    "technicalindicators": "^3.1.0",
+    "tough-cookie": "^5.1.2",
+    "ts-node": "^10.9.2",
+    "tweetnacl": "^1.0.3",
+    "typescript": "^5.9.2",
+    "ws": "^8.18.3"
+  },
+  "config": {
+    "configFile": "config/axiom-live.config.json",
+    "reportsDir": "reports",
+    "agentsDir": "agents/axiom"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.5",
+    "nock": "^14.0.10"
+  }
+}
