@@ -1,0 +1,9 @@
+[submodule "chad-lockdown-spine"]
+	path = chad-lockdown-spine
+	url = https://github.com/3thi1xxx/chad-lockdown-spine.git
+[submodule "new axiom trade/axiom-trade"]
+	path = new axiom trade/axiom-trade
+	url = https://github.com/3thi1xxx/axiom-trade.git
+[submodule "axiomtrade-archive"]
+	path = axiomtrade-archive
+	url = git@github.com:3thi1xxx/axiom-trade.git
