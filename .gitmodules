@@ -6,4 +6,4 @@
 	url = https://github.com/3thi1xxx/axiom-trade.git
 [submodule "axiomtrade-archive"]
 	path = axiomtrade-archive
-	url = git@github.com:3thi1xxx/axiom-trade.git
+	url = https://github.com/3thi1xxx/axiom-trade.git
